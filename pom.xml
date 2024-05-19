@@ -9,7 +9,7 @@
   <url>https://console.cloud.google.com/home/dashboard?project=athenaeum-brew</url>
 
   <properties>
-    <maven.compiler.java>21</maven.compiler.java>
+    <maven.compiler.java>17</maven.compiler.java>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
