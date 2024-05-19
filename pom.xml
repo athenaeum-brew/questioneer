@@ -64,7 +64,6 @@
         <version>2.4.0</version> <!-- Use the latest version -->
         <configuration>
           <projectId>athenaeum-brew</projectId>
-          <dockerImage>europe-west3-docker.pkg.dev/athenaeum-brew/athenaeum/my-tomcat-app:tag1</dockerImage>
           <deploy.version>GCLOUD_CONFIG</deploy.version>
         </configuration>
       </plugin>
