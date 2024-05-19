@@ -19,7 +19,9 @@
         </main>
 
         <script>
-            const socket = new WebSocket("ws://" + window.location.host + "/questioneer/ws");
+            // Determine the WebSocket protocol based on the current page's protocol
+            const protocol = window.location.protocol === "https:" ? "wss:" : "ws:";
+            const socket = new WebSocket(protocol + "//" + window.location.host + "/questioneer/ws");
             const activeSessionsElement = document.getElementById("activeSessions");
             socket.onmessage = function (event) {
                 const activeSessions = event.data;
