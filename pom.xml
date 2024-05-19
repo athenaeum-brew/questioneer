@@ -25,6 +25,15 @@
     <finalName>questioneer</finalName>
     <plugins>
       <plugin>
+        <!-- 
+          mvn versions:display-dependency-updates
+          mvn versions:use-latest-versions
+        -->
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>versions-maven-plugin</artifactId>
+        <version>2.16.2</version>
+      </plugin>
+      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.13.0</version>
