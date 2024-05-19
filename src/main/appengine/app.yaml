@@ -2,4 +2,5 @@ runtime: java
 env: flex
 
 runtime_config:
-  jdk: openjdk-17-jdk
+    operating_system: "ubuntu22"
+    runtime_version: "21"
