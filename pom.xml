@@ -78,8 +78,8 @@
                 <region>germanywestcentral</region>
                 <runtime>
                     <os>Linux</os>
-                    <javaVersion>Java 17</javaVersion>
-                    <webContainer>Tomcat 10.0</webContainer>
+                    <javaVersion>Java 21</javaVersion>
+                    <webContainer>Tomcat 10.1</webContainer>
                 </runtime>
                 <deployment>
                     <resources>

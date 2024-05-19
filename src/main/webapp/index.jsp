@@ -21,7 +21,10 @@
         <script>
             // Determine the WebSocket protocol based on the current page's protocol
             const protocol = window.location.protocol === "https:" ? "wss:" : "ws:";
-            const socket = new WebSocket(protocol + "//" + window.location.host + "/questioneer/ws");
+            // Check if the current URL contains "/questioneer"
+            const path = window.location.pathname.includes("/questioneer") ? "/questioneer/ws" : "/ws";
+
+            const socket = new WebSocket(protocol + "//" + window.location.host + path);
             const activeSessionsElement = document.getElementById("activeSessions");
             socket.onmessage = function (event) {
                 const activeSessions = event.data;
