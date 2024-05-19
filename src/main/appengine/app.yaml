@@ -1,5 +1,5 @@
 runtime: java
 env: flex
 
-runtime_config:
-  jdk: openjdk21
+service: default
+image: europe-west3-docker.pkg.dev/athenaeum-brew/athenaeum/my-tomcat-app:tag1
