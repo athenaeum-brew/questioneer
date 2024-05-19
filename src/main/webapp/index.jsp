@@ -16,6 +16,7 @@
                     <%= application.getAttribute("counter") %>
                 </span>
             </h2>
+
         </main>
 
         <script>
@@ -23,7 +24,6 @@
             const protocol = window.location.protocol === "https:" ? "wss:" : "ws:";
             // Check if the current URL contains "/questioneer"
             const path = window.location.pathname.includes("/questioneer") ? "/questioneer/ws" : "/ws";
-
             const socket = new WebSocket(protocol + "//" + window.location.host + path);
             const activeSessionsElement = document.getElementById("activeSessions");
             socket.onmessage = function (event) {
