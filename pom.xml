@@ -9,7 +9,6 @@
   <packaging>war</packaging>
   <!-- url>https://console.cloud.google.com/home/dashboard?project=athenaeum-brew</!-->
   <url>https://questioneer-1716142208629.azurewebsites.net/</url>
-
   <properties>
     <maven.compiler.java>21</maven.compiler.java>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -70,6 +69,9 @@
         </configuration>
       </plugin>
       <plugin>
+        <!-- 
+          mvn clean package azure-webapp:deploy
+        -->
         <groupId>com.microsoft.azure</groupId>
         <artifactId>azure-webapp-maven-plugin</artifactId>
         <version>2.13.0</version>
