@@ -6,16 +6,16 @@ import jakarta.websocket.Session;
 import jakarta.websocket.server.ServerEndpoint;
 
 @ServerEndpoint(value = "/ws")
-public class SessionEndpoint {
+public class QuestioneerWebSocket {
 
     @OnOpen
     public void onOpen(final Session session) {
-        Sessions.INSTANCE.register(session);
+        QuestioneerWebSockets.INSTANCE.register(session);
     }
 
     @OnClose
     public void onClose(Session session) {
-        Sessions.INSTANCE.unregister(session);
+        QuestioneerWebSockets.INSTANCE.unregister(session);
     }
 
 }
