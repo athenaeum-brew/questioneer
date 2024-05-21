@@ -19,7 +19,6 @@
             background-color: #28a745 !important;
         }
     </style>
-    <jsp:include page="/favicon.jsp" />
 </head>
 
 <body>
