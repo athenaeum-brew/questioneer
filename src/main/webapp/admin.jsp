@@ -12,6 +12,7 @@
 
 <head>
     <title>Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <style>
         .custom-progress-bar {
@@ -39,7 +40,7 @@
         <!-- Quiz Response Tally Card -->
         <div class="card">
             <div class="card-body">
-                <h2 class="card-title">Quiz Response Tally</h2>
+                <h2 class="card-title">Quiz Response Tally<sup>*</sup></h2>
                 <table class="table table-bordered mt-2">
                     <thead>
                         <tr>
@@ -65,6 +66,13 @@
             </div>
         </div>
     </main>
+
+    <!-- Fixed bottom footer -->
+    <footer class="footer fixed-bottom ">
+        <div class="container">
+            <span>(*) Tally: a record or count of a number of items (<a href="https://dictionary.cambridge.org/dictionary/english/tally">dictionary.cambridge.org</a>)</span>
+        </div>
+    </footer>    
     
     <script>
         // Define JavaScript array with type prefixes
