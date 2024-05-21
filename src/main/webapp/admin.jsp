@@ -13,6 +13,11 @@
 <head>
     <title>Dashboard</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <style>
+        .custom-progress-bar {
+            background-color: #28a745 !important;
+        }
+    </style>    
 </head>
 
 <body>
@@ -39,7 +44,7 @@
                     <thead>
                         <tr>
                             <th scope="col">✅</th>
-                            <th scope="col">❌</th>
+                            <th scope="col" style="text-align: end;">❌</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -48,11 +53,14 @@
                                 <div id="goodAnswers"><%= PartialAnswerServlet.goods.get() %></div>
                             </td>
                             <td>
-                                <div id="badAnswers"> <%= PartialAnswerServlet.bads.get() %></div>
+                                <div id="badAnswers" style="text-align: end;"> <%= PartialAnswerServlet.bads.get() %></div>
                             </td>
                         </tr>
                     </tbody>
                 </table>
+                <div class="progress my-3" style="height: 30px;">
+                    <div id="progressBar" class="progress-bar custom-progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>                
                 <button id="resetButton" class="btn btn-secondary">Reset ✅ and ❌ Counters</button>
             </div>
         </div>
@@ -87,15 +95,33 @@
                         break;
                     case 'GOOD:':
                         goodAnswersElement.textContent = trimmedData;
+                        updateProgressBar();
                         break;
                     case 'BAD:':
                         badAnswersElement.textContent = trimmedData;
+                        updateProgressBar();
                         break;
                     default:
                         break;
                 }
             }
         };
+
+        function updateProgressBar() {
+            const goodAnswers = parseInt(goodAnswersElement.textContent);
+            const badAnswers = parseInt(badAnswersElement.textContent);
+            const totalAnswers = goodAnswers + badAnswers;
+            const percentage = totalAnswers === 0 ? 0 : (goodAnswers / totalAnswers) * 100;
+
+            progressBar.style.width = percentage + '%';
+            progressBar.setAttribute('aria-valuenow', percentage);
+
+            if (totalAnswers !== 0) {
+                progressBar.innerText = percentage.toFixed(0) + '% of ' + totalAnswers;
+            } else {
+                progressBar.innerText = '';
+            }            
+        }        
 
         // Add event listener to the button
         document.getElementById("resetButton").addEventListener("click", function () {
