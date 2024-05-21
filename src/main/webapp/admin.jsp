@@ -18,7 +18,8 @@
         .custom-progress-bar {
             background-color: #28a745 !important;
         }
-    </style>    
+    </style>
+    <jsp:include page="/favicon.jsp" />
 </head>
 
 <body>
