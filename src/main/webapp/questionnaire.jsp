@@ -78,9 +78,30 @@
         let studentAnswers = [];
         let questionnaireTitle;
 
+        // https://bost.ocks.org/mike/shuffle/
+        function shuffle(array) {
+            var m = array.length, t, i;
+
+            // While there remain elements to shuffle…
+            while (m) {
+
+                // Pick a remaining element…
+                i = Math.floor(Math.random() * m--);
+
+                // And swap it with the current element.
+                t = array[m];
+                array[m] = array[i];
+                array[i] = t;
+            }
+
+            return array;
+        }        
+
         function loadQuestionnaire() {
             const questionnaireJson = '<%= getQuestionnaireJson(request.getParameter("file")) %>';
-            return JSON.parse(questionnaireJson);
+            const quizz = JSON.parse(questionnaireJson);
+            shuffle(quizz.questions);
+            return quizz;
         }
 
         function showQuestionnaire() {
@@ -147,10 +168,24 @@
                 }
             });
 
-            studentAnswers.push({
+            const studentAnswerData = {
                 question: question.question,
-                selectedAnswers: selectedAnswers
-            });
+                selectedAnswers: selectedAnswers,
+                isCorrect: checkStudentAnswers(question.correct, selectedAnswers)
+            };
+
+            studentAnswers.push(studentAnswerData);
+
+            // Post the answer to the server
+            fetch('partial', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(studentAnswerData)
+            }).then(response => response.text()).then(result => {
+                console.log('Partial result:', result);
+            }).catch(error => console.error('Error:', error));
         }
 
         function submitAnswers() {

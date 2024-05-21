@@ -22,12 +22,12 @@ public enum QuestioneerWebSockets {
         activeWebSockets.remove(session);
     }
 
-    public void broadcast(String message) {
+    public void broadcast(QuestioneerWebSocketMessageType type, String message) {
         System.out.println(
                 "broadcasting message \"" + message + "\" to " + activeWebSockets.size() + " active web sockets");
         for (Session session : activeWebSockets) {
             try {
-                session.getBasicRemote().sendText(message);
+                session.getBasicRemote().sendText(type + ":" + message);
             } catch (IOException e) {
                 // throw new RuntimeException(e);
                 System.err.println("Could not send text to " + session.getId() + " - " + e.getMessage());

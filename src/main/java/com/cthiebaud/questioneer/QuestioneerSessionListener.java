@@ -50,6 +50,6 @@ public class QuestioneerSessionListener implements HttpSessionListener {
             servletContext.setAttribute("counter", counter);
         }
 
-        QuestioneerWebSockets.INSTANCE.broadcast(String.format("%d", counter));
+        QuestioneerWebSockets.INSTANCE.broadcast(QuestioneerWebSocketMessageType.COUNTER, String.format("%d", counter));
     }
 }
