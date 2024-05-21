@@ -1,0 +1,106 @@
+{
+  "id": "concurrency_test",
+  "description": "Concurrency Concepts Test",
+  "questions": [
+    {
+      "question": "What does parallel programming involve?",
+      "answers": [
+        "Dividing a problem into sub-problems and solving them sequentially",
+        "Dividing a problem into sub-problems, solving them simultaneously on multiple processors or cores, and then combining the results",
+        "Executing tasks that can start, run, and complete in the background without blocking the main thread of execution",
+        "Creating multiple threads within a single process to perform tasks concurrently"
+      ],
+      "correct": [1]
+    },
+    {
+      "question": "Which of the following best defines concurrent programming?",
+      "answers": [
+        "Executing tasks sequentially to ensure proper synchronization",
+        "Structuring a program to handle multiple tasks that can make progress independently",
+        "Running tasks simultaneously on multiple processors without coordination",
+        "Creating separate processes to handle different tasks"
+      ],
+      "correct": [1]
+    },
+    {
+      "question": "What is a key characteristic of asynchronous programming?",
+      "answers": [
+        "Tasks must run simultaneously",
+        "Tasks are executed sequentially to ensure proper synchronization",
+        "Tasks can start, run, and complete in the background without blocking the main thread of execution",
+        "Tasks are executed only after the completion of other tasks"
+      ],
+      "correct": [2]
+    },
+    {
+      "question": "Which statement best describes multithreaded programming?",
+      "answers": [
+        "Creating separate processes to perform tasks concurrently",
+        "Executing tasks that can make progress independently",
+        "Creating multiple threads within a single process to perform tasks concurrently",
+        "Executing tasks that are synchronized to ensure sequential execution"
+      ],
+      "correct": [2]
+    },
+    {
+      "question": "Why would someone choose to engage in parallel, concurrent, asynchronous, or multithreaded programming?",
+      "answers": [
+        "To make programming simpler",
+        "For aesthetic reasons",
+        "For performance improvement",
+        "To avoid handling real-time data"
+      ],
+      "correct": [2]
+    },
+    {
+      "question": "Which of the following is NOT a challenge in concurrent programming?",
+      "answers": [
+        "Race Conditions",
+        "Deadlocks",
+        "Performance Optimization",
+        "Synchronization"
+      ],
+      "correct": [2]
+    },
+    {
+      "question": "What is a strategy to address race conditions in concurrent programming?",
+      "answers": [
+        "Implementing robust error handling mechanisms",
+        "Using synchronization mechanisms like locks and semaphores",
+        "Avoiding shared mutable state between threads",
+        "Creating separate processes for each task"
+      ],
+      "correct": [1, 2]
+    },
+    {
+      "question": "Which of the following is a type of lock used in concurrent programming?",
+      "answers": [
+        "Exception Locks",
+        "Volatile Locks",
+        "Reentrant Locks",
+        "Sequential Locks"
+      ],
+      "correct": [2]
+    },
+    {
+      "question": "What is the purpose of using atomic operations in concurrent programming?",
+      "answers": [
+        "To ensure visibility of changes across threads",
+        "To perform operations on variables without synchronization",
+        "To create thread-safe collections",
+        "To prevent deadlocks"
+      ],
+      "correct": [0, 1]
+    },
+    {
+      "question": "Which of the following is a synchronization primitive used in concurrent programming?",
+      "answers": [
+        "Immutable Objects",
+        "Copy-On-Write Collections",
+        "Volatile Variables",
+        "ThreadLocal<T>"
+      ],
+      "correct": [2, 3]
+    }
+  ]
+}

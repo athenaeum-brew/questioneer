@@ -18,6 +18,28 @@
             width: 100%;
         }
     </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script id="question-summary-template" type="text/x-handlebars-template">
+        <hr>
+        <h5>{{index}}. {{question}} {{#if studentAnswersMatch}}✅{{else}}❌{{/if}}</h5>
+        <p><strong>Correct Answer(s):</strong> 
+            <ul>
+            {{#each correctAnswersSummary}}
+                <li>{{{this}}}</li>
+            {{/each}}
+            </ul>
+        </p>
+        {{#unless studentAnswersMatch}}
+        <p><strong>Your Answer(s):</strong>
+            <ul>
+            {{#each studentAnswersSummary}}
+                <li>{{{this}}}</li>
+            {{/each}}
+            </ul>
+        </p>
+        {{/unless}}
+    </script>    
+
 </head>
 
 <body>
@@ -159,6 +181,8 @@
             questionnaireTitle.innerText = description;
         }
 
+        const questionSummaryTemplate = Handlebars.compile(document.getElementById('question-summary-template').innerHTML);
+
         function displaySummary() {
             const summaryContainer = document.getElementById('summaryContainer');
             summaryContainer.style.display = 'block'
@@ -168,12 +192,18 @@
             questionnaire.questions.forEach((question, index) => {
                 const questionSummary = document.createElement('div');
                 questionSummary.classList.add('question-summary');
-                questionSummary.innerHTML = `
-                    <h3>Question \${index + 1}</h3>
-                    <p><strong>Question:</strong> \${question.question}</p>
-                    <p><strong>Your Answer(s):</strong> \${getStudentAnswersSummary(studentAnswers[index].selectedAnswers, question.answers)}</p>
-                    <p><strong>Correct Answer(s):</strong> \${getCorrectAnswersSummary(question, question.answers)}</p>
-                `;
+
+                // Check if student's answers match correct answers
+                const studentAnswer = studentAnswers[index].selectedAnswers
+                const studentAnswersMatch = checkStudentAnswers(question.correct,  studentAnswer);
+                
+                questionSummary.innerHTML = questionSummaryTemplate({
+                    index: index + 1,
+                    question: question.question,
+                    studentAnswersMatch: studentAnswersMatch,
+                    correctAnswersSummary: getCorrectAnswersSummary(question),
+                    studentAnswersSummary: getStudentAnswersSummary(question, studentAnswer)
+                });
                 summary.appendChild(questionSummary);
             });
 
@@ -181,15 +211,36 @@
             document.getElementById('questionnaire').style.display = 'none';
         }
 
-        function getStudentAnswersSummary(selectedIndexes, answers) {
-            const selectedAnswers = selectedIndexes.map(index => answers[index]);
-            return selectedAnswers.join(', ');
+        function checkStudentAnswers(correctAnswers, studentAnswers) {
+            if (correctAnswers.length !== studentAnswers.length) {
+                return false;
+            }
+            const correctSet = new Set(correctAnswers);
+            for (const answer of studentAnswers) {
+                if (!correctSet.has(answer)) {
+                    return false;
+                }
+            }
+            return true;
         }
 
-        function getCorrectAnswersSummary(question, answers) {
+        function getStudentAnswersSummary(question, studentAnswer) {
+            if (studentAnswer.length == 0)
+                return ["<i>No Answer given.</i>"]
+            const studentAnswersSum = studentAnswer.map(index => {
+                if (question.correct.includes(index)) {
+                    return question.answers[index]
+                } else {
+                    return "<s>"+question.answers[index]+"</s>"
+                }
+            });
+            return studentAnswersSum;
+        }
+
+        function getCorrectAnswersSummary(question) {
             const correctIndexes = question.correct;
-            const correctAnswers = correctIndexes.map(index => answers[index]);
-            return correctAnswers.join(', ');
+            const correctAnswers = correctIndexes.map(index => question.answers[index]);
+            return correctAnswers;
         }
 
         function replay() {
