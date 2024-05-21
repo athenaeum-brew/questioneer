@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <main class="container">
+    <main class="container my-3">
         <h1>Questionneers</h1>
         <ul>
             <c:forEach var="file" items="${jspFiles}">

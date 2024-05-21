@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <main class="container">
+    <main class="container my-3">
         <h1>Dashboard</h1>
     
         <!-- Active Sessions Card -->

@@ -46,7 +46,7 @@
 </head>
 
 <body>
-    <div class="container mt-5">
+    <div class="container my-3">
         <h1 id="questionnaire-title"></h1>
         <div id="questionnaire" class="card">
             <div class="card-body">
