@@ -18,26 +18,29 @@
             width: 100%;
         }
     </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
     <script id="question-summary-template" type="text/x-handlebars-template">
-        <hr>
-        <h5>{{index}}. {{question}} {{#if studentAnswersMatch}}✅{{else}}❌{{/if}}</h5>
-        <p><strong>Correct Answer(s):</strong> 
-            <ul>
-            {{#each correctAnswersSummary}}
-                <li>{{{this}}}</li>
-            {{/each}}
-            </ul>
-        </p>
-        {{#unless studentAnswersMatch}}
-        <p><strong>Your Answer(s):</strong>
-            <ul>
-            {{#each studentAnswersSummary}}
-                <li>{{{this}}}</li>
-            {{/each}}
-            </ul>
-        </p>
-        {{/unless}}
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5>{{index}}. {{question}} {{#if studentAnswersMatch}}✅{{else}}❌{{/if}}</h5>
+                <p><strong>Correct Answer(s):</strong> 
+                    <ul>
+                    {{#each correctAnswersSummary}}
+                        <li>{{{this}}}</li>
+                    {{/each}}
+                    </ul>
+                </p>
+                {{#unless studentAnswersMatch}}
+                <p><strong>Your Answer(s):</strong>
+                    <ul>
+                    {{#each studentAnswersSummary}}
+                        <li>{{{this}}}</li>
+                    {{/each}}
+                    </ul>
+                </p>
+                {{/unless}}
+            </div>
+        </div>
     </script>    
 
 </head>
