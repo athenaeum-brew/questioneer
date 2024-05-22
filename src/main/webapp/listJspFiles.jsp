@@ -12,7 +12,8 @@
 
 <body>
     <main class="container my-3">
-        <h1>Questionneers</h1>
+        <a href="admin" target="_admin" style="float:right; text-decoration: none; font-size: 32px;">⬢</a>
+        <h1>Questionnaires</h1>
         <ul>
             <c:forEach var="file" items="${jspFiles}">
                 <li><a href="${file}">${file}</a></li>

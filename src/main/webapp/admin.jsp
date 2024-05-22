@@ -41,7 +41,7 @@
         <div class="card">
             <div class="card-body">
                 <h2 class="card-title">Quiz Response Tally<sup>*</sup></h2>
-                <table class="table table-bordered mt-2">
+                <table class="table mt-2">
                     <thead>
                         <tr>
                             <th scope="col">✅</th>
