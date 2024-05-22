@@ -1,0 +1,106 @@
+{
+  "id": "test2",
+  "description": "Concurrency Test Questionnaire 2",
+  "questions": [
+    {
+      "question": "What is the main difference between synchronous and asynchronous code?",
+      "answers": [
+        "Synchronous code runs tasks sequentially.",
+        "Asynchronous code runs tasks sequentially.",
+        "Synchronous code runs tasks concurrently.",
+        "Asynchronous code runs tasks in parallel."
+      ],
+      "correct": [0, 3]
+    },
+    {
+      "question": "Which method is used to wait for threads to finish execution in an ExecutorService?",
+      "answers": [
+        "shutdownNow()",
+        "shutdown()",
+        "awaitTermination()",
+        "invokeAll()"
+      ],
+      "correct": [2]
+    },
+    {
+      "question": "What is a potential disadvantage of using the synchronized keyword?",
+      "answers": [
+        "Can cause performance overhead due to locking.",
+        "Simplifies multithreading by handling synchronization internally.",
+        "Ensures that only one thread can access a critical section of code at a time.",
+        "Prevents concurrent modification of shared resources."
+      ],
+      "correct": [0]
+    },
+    {
+      "question": "Which of the following are best practices for using the synchronized keyword?",
+      "answers": [
+        "Use synchronized blocks for finer-grained control.",
+        "Prefer global variables for thread-safe programs.",
+        "Use synchronization mechanisms like locks or synchronized blocks.",
+        "Document your synchronization policy."
+      ],
+      "correct": [0, 2, 3]
+    },
+    {
+      "question": "What does the volatile keyword ensure?",
+      "answers": [
+        "That a variable is not cached and is read from main memory.",
+        "That only one thread can modify the variable at a time.",
+        "Visibility of changes across threads.",
+        "Prevents compiler optimizations that might reorder instructions."
+      ],
+      "correct": [0, 2, 3]
+    },
+    {
+      "question": "Which Java class provides thread-safe collections?",
+      "answers": [
+        "ConcurrentHashMap",
+        "ArrayList",
+        "CopyOnWriteArrayList",
+        "HashSet"
+      ],
+      "correct": [0, 2]
+    },
+    {
+      "question": "What is an atomic class in Java?",
+      "answers": [
+        "A class that provides lock-free thread-safe operations.",
+        "A class that allows multiple threads to access its methods simultaneously.",
+        "A class that ensures changes to a variable are immediately visible to other threads.",
+        "A class that prevents certain compiler optimizations."
+      ],
+      "correct": [0]
+    },
+    {
+      "question": "Which tool can be used to detect potential race conditions in your code?",
+      "answers": [
+        "Mockito",
+        "SonarQube",
+        "ThreadSanitizer",
+        "Gatling"
+      ],
+      "correct": [1, 2]
+    },
+    {
+      "question": "What lesson is emphasized about asynchronous, parallel, concurrent, or multithreaded programs?",
+      "answers": [
+        "They always produce the expected results.",
+        "They may produce expected results for a long time before crashing unexpectedly.",
+        "Testing is explicitly out of the scope for these programs.",
+        "They simplify concurrent programming."
+      ],
+      "correct": [1]
+    },
+    {
+      "question": "Which of the following statements are true about concurrency best practices?",
+      "answers": [
+        "Make fields final unless they need to be mutable.",
+        "Immutable objects simplify concurrent programming.",
+        "Guard each mutable variable with a lock.",
+        "Document your synchronization policy."
+      ],
+      "correct": [0, 1, 2, 3]
+    }
+  ]
+}
