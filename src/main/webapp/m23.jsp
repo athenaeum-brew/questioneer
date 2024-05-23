@@ -1,3 +1,3 @@
 <jsp:forward page="questionnaire.jsp">
-    <jsp:param name="file" value="m15.json" />
+    <jsp:param name="file" value="m23.json" />
 </jsp:forward>

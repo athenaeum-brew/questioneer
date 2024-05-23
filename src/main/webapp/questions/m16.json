@@ -1,6 +1,6 @@
 {
-  "id": "test2",
-  "description": "Concurrency Test Questionnaire 2",
+  "id": "quizz16",
+  "description": "Concurrency",
   "questions": [
     {
       "question": "What is the main difference between synchronous and asynchronous code?",

@@ -1,6 +1,6 @@
 {
-  "id": "concurrency_test",
-  "description": "Concurrency Quizz",
+  "id": "quizz15",
+  "description": "Introduction to Concurrency",
   "questions": [
     {
       "question": "What does parallel programming involve?",
