@@ -3,6 +3,7 @@ package com.cthiebaud.questioneer;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletContext;
@@ -35,6 +36,9 @@ public class IndexServlet extends HttpServlet {
                 }
             }
         }
+
+        // Sort the list alphabetically
+        Collections.sort(jspFiles);
 
         request.setAttribute("jspFiles", jspFiles);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/listJspFiles.jsp");
