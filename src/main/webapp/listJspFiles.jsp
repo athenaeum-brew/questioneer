@@ -7,20 +7,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>List of JSP Files</title>
+    <title>Questioneer</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        th, th > *, 
+        td, td > * {
+            text-align: center;
+            vertical-align: middle;
+        } 
+        th:first-child,
+        td:first-child {
+            text-align: start;
+        }
+        th:last-child,
+        td:last-child {
+            text-align: end;
+        }
+    </style>
 </head>
 
 <body>
     <main class="container my-3">
-        <a href="admin" target="_admin" style="float:right; text-decoration: none; font-size: 32px;">⬢</a>
-        <h1>Questionnaires</h1>
+        <a href="admin" target="_admin" style="float:right; text-decoration: none; font-size: 32px;">⬡</a>
+        <h1>Modules</h1>
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th scope="col">Module</th>
-                    <th scope="col">Questionnaire</th>
-                    <th scope="col">Lecture</th>
+                    <th scope="col" class="">Slides</th>
+                    <th scope="col" class="">Description</th>
+                    <th scope="col" class=""><span>Quizz</span><span style="font-size:24px; color: gray; margin-left: .5rem;">↯</span></th>
                 </tr>
             </thead>
             <tbody>
@@ -31,14 +46,15 @@
                     <c:set var="number" value="${fn:substring(file, mIndex + 1, dotIndex)}" />
                     
                     <!-- Construct the module string and the lecture link -->
-                    <c:set var="moduleString" value="module ${number}" />
+                    <c:set var="slidesString" value="Slides ${number}" />
+                    <c:set var="quizzString" value="Quizz ${number}" />
                     <c:set var="lectureLink" value="https://athenaeum.cthiebaud.com/slides/?${number}.md" />
                     
                     <!-- Display the row in the table -->
-                    <tr>
-                        <td>${number}</td>
-                        <td><a href="${file}">${moduleString}</a></td>
-                        <td><a id="lecture" href="${lectureLink}">lecture</a></td>
+                    <tr id="tr${number}">
+                        <td><a href="${lectureLink}">${slidesString}</a></td>
+                        <td>&nbsp;</td>
+                        <td><a href="${file}">${quizzString}</a></td>
                     </tr>
                 </c:forEach>
             </tbody>
@@ -47,12 +63,6 @@
 </body>
 
 <script>
-    const transformStrings = (str) => {
-        const moduleStr = str.replace(/m(\d\d)\.jsp/, 'module $1');
-        const urlStr = str.replace(/m(\d\d)\.jsp/, 'https://athenaeum.cthiebaud.com/slides/?$1.md');
-        return moduleStr;
-        // return { moduleStr, urlStr };
-    };
 </script>
 
 </html>
