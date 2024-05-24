@@ -9,12 +9,16 @@
         │               ├── AdminServlet.java
         │               ├── PartialAnswerServlet.java
         │               ├── QuestioneerContextListener.java
-        │               ├── QuestioneerRequestListener.java
         │               ├── QuestioneerSessionListener.java
         │               ├── QuestioneerWebSocket.java
         │               ├── QuestioneerWebSocketMessageType.java
         │               ├── QuestioneerWebSockets.java
         │               └── SubmitAnswersServlet.java
+        ├── resources
+        │   └── questions
+        │       ├── m15.json
+        │       ├── m16.json
+        │       └── m23.json
         └── webapp
             ├── admin.jsp
             ├── favicon.ico
@@ -23,11 +27,6 @@
             ├── m15.jsp
             ├── m16.jsp
             ├── m23.jsp
-            ├── questionnaire.jsp
-            └── questions
-                ├── m15.json
-                ├── m16.json
-                ├── m23.json
-                └── test.json
+            └── questionnaire.jsp
 
-9 directories, 22 files
+10 directories, 20 files
