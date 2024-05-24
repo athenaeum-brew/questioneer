@@ -1,5 +1,6 @@
-<%@ page import="java.io.FileReader, java.io.File" %>
 <%@ page import="org.json.simple.JSONObject, org.json.simple.parser.JSONParser" %>
+<%@ page import="java.io.InputStream, java.io.InputStreamReader, java.nio.charset.StandardCharsets" %>
+<%@ page import="java.net.URL, java.util.Scanner" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -315,12 +316,21 @@ public String getQuestionnaireJson(String file) {
     }
     JSONParser parser = new JSONParser();
     try {
-        File jsonFile = new File(getServletContext().getRealPath("/questions/" + file));
-        if (!jsonFile.exists()) {
+        // Load the file from the classpath
+        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("/questions/" + file);
+        if (inputStream == null) {
             return "{}";
         }
-        FileReader reader = new FileReader(jsonFile);
+        
+        // Convert InputStream to InputStreamReader
+        InputStreamReader reader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
+        
+        // Parse the JSON file
         JSONObject questionnaireJson = (JSONObject) parser.parse(reader);
+        
+        // Close the input stream
+        inputStream.close();
+        
         return questionnaireJson.toJSONString();
     } catch (Exception e) {
         e.printStackTrace();

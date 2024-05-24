@@ -7,7 +7,6 @@
         │       └── cthiebaud
         │           └── questioneer
         │               ├── AdminServlet.java
-        │               ├── IndexServlet.java
         │               ├── PartialAnswerServlet.java
         │               ├── QuestioneerContextListener.java
         │               ├── QuestioneerRequestListener.java
@@ -19,7 +18,8 @@
         └── webapp
             ├── admin.jsp
             ├── favicon.ico
-            ├── listJspFiles.jsp
+            ├── header.jspf
+            ├── index.jsp
             ├── m15.jsp
             ├── m16.jsp
             ├── m23.jsp
