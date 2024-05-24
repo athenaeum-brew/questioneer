@@ -19,6 +19,7 @@ public class QuestioneerRequestListener implements ServletRequestListener {
         HttpServletRequest request = (HttpServletRequest) sre.getServletRequest();
         Long startTime = (Long) request.getAttribute("startTime");
         long duration = System.currentTimeMillis() - startTime;
-        System.out.println("Request from " + request.getRemoteAddr() + " took " + duration + " ms.");
+        // System.out.println("Request from " + request.getRemoteAddr() + " took " +
+        // duration + " ms.");
     }
 }

@@ -1,16 +1,15 @@
 package com.cthiebaud.questioneer;
 
 import java.io.IOException;
-import java.util.Collections;
-import java.util.HashSet;
 import java.util.Set;
 
 import jakarta.websocket.Session;
+import java.util.concurrent.ConcurrentHashMap;
 
 public enum QuestioneerWebSockets {
     INSTANCE;
 
-    final private Set<Session> activeWebSockets = Collections.synchronizedSet(new HashSet<>());
+    final private Set<Session> activeWebSockets = ConcurrentHashMap.newKeySet();
 
     public void register(Session session) {
         System.out.println("added web socket " + session.getId());
@@ -24,7 +23,11 @@ public enum QuestioneerWebSockets {
 
     public void broadcast(QuestioneerWebSocketMessageType type, String message) {
         System.out.println(
-                "broadcasting message \"" + message + "\" to " + activeWebSockets.size() + " active web sockets");
+                String.format("broadcasting message %s:%s to %d active web sockets",
+                        type,
+                        message,
+                        activeWebSockets.size()));
+
         for (Session session : activeWebSockets) {
             try {
                 session.getBasicRemote().sendText(type + ":" + message);

@@ -11,6 +11,9 @@ import jakarta.servlet.http.HttpServletResponse;
 
 @WebServlet("/admin")
 public class AdminServlet extends HttpServlet {
+    private static final long serialVersionUID = 3L;
+
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         // Forward the request to the admin.jsp page

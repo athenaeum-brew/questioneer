@@ -10,12 +10,9 @@ import jakarta.servlet.ServletContext;
 @WebListener
 public class QuestioneerSessionListener implements HttpSessionListener {
 
-    final private static int maxInactiveIntervalInSeconds = 60;
-
     @Override
     public void sessionCreated(HttpSessionEvent se) {
         HttpSession session = se.getSession();
-        session.setMaxInactiveInterval(maxInactiveIntervalInSeconds);
 
         System.out.println(
                 String.format("Session [%s] created. Will be destroyed in %d seconds",
@@ -28,6 +25,7 @@ public class QuestioneerSessionListener implements HttpSessionListener {
     @Override
     public void sessionDestroyed(HttpSessionEvent se) {
         HttpSession session = se.getSession();
+
         System.out.println(
                 String.format("Session [%s] destroyed. Existed for %d ms.",
                         session.getId(),

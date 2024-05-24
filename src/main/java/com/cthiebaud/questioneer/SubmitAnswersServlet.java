@@ -21,7 +21,7 @@ public class SubmitAnswersServlet extends HttpServlet {
         // Create a unique filename for the student (this is a simple example, you may
         // want to use student ID or other identifier)
         String studentFile = getServletContext().getRealPath("/") + "student_" + System.currentTimeMillis() + ".json";
-        System.out.println(studentFile);
+        System.out.println("ANSWERS WRITTEN TO " + studentFile);
 
         try (FileWriter file = new FileWriter(studentFile)) {
             file.write(body);
