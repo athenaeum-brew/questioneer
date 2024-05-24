@@ -34,7 +34,7 @@ public class QuestioneerContextListener implements ServletContextListener {
         // Sort the list alphabetically
         Collections.sort(jspFiles);
 
-        context.setAttribute("jspFiles", jspFiles);
+        context.setAttribute("jspFiles", List.copyOf(jspFiles));
     }
 
     @Override
