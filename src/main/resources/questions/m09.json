@@ -1,0 +1,108 @@
+{
+    "id": "quizz09",
+    "description": "Java Streams",
+    "comment": "Only one valid answer per question",
+    "questions": [
+      {
+        "question": "What is a Java Stream?",
+        "answers": [
+          "A sequence of data elements supporting sequential and parallel aggregate operations",
+          "A collection of elements with no particular order",
+          "A mechanism for handling input and output operations",
+          "A design pattern used for event-driven programming"
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "Which of the following is a terminal operation in Java Streams?",
+        "answers": [
+          "filter()",
+          "map()",
+          "collect()",
+          "sorted()"
+        ],
+        "correct": [2]
+      },
+      {
+        "question": "What does the map() method do in Java Streams?",
+        "answers": [
+          "Filters elements based on a predicate",
+          "Transforms each element to another object",
+          "Collects elements into a collection",
+          "Sorts elements in natural order"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "How do you convert a Stream into a List?",
+        "answers": [
+          "Using the toList() method",
+          "Using the collect(Collectors.toList()) method",
+          "Using the collectList() method",
+          "Using the list() method"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "What is the main advantage of using parallel streams?",
+        "answers": [
+          "Simplifies the syntax of stream operations",
+          "Enables stream operations to be processed in parallel for improved performance on multi-core processors",
+          "Ensures thread-safety of stream operations",
+          "Guarantees the order of stream processing"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "Which method is used to filter elements of a stream?",
+        "answers": [
+          "map()",
+          "forEach()",
+          "filter()",
+          "reduce()"
+        ],
+        "correct": [2]
+      },
+      {
+        "question": "What does the reduce() method do?",
+        "answers": [
+          "Collects elements into a collection",
+          "Performs a reduction on the elements of the stream using an associative accumulation function",
+          "Filters elements based on a predicate",
+          "Transforms each element to another object"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "What is the difference between a sequential stream and a parallel stream?",
+        "answers": [
+          "Sequential streams operate on a single thread, whereas parallel streams operate on multiple threads",
+          "Sequential streams can handle I/O operations, whereas parallel streams cannot",
+          "Sequential streams are used for file operations, whereas parallel streams are used for network operations",
+          "Sequential streams guarantee element order, whereas parallel streams do not"
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "Which method is used to sort elements in a stream?",
+        "answers": [
+          "filter()",
+          "sorted()",
+          "map()",
+          "reduce()"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "What does the forEach() method do in Java Streams?",
+        "answers": [
+          "Applies a function to each element in the stream",
+          "Transforms each element to another object",
+          "Filters elements based on a predicate",
+          "Collects elements into a collection"
+        ],
+        "correct": [0]
+      }
+    ]
+  }
+  

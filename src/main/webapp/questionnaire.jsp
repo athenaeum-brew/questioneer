@@ -115,10 +115,16 @@
         }        
 
         function loadQuestionnaire() {
-            const questionnaireJson = '<%= getQuestionnaireJson(request.getParameter("file")) %>';
+            const questionnaireJson = decodeHtmlEntities('<%= getQuestionnaireJson(request.getParameter("file")) %>');
             const quizz = JSON.parse(questionnaireJson);
             shuffle(quizz.questions);
             return quizz;
+        }
+
+        function decodeHtmlEntities(html) {
+           var txt = document.createElement("textarea");
+            txt.innerHTML = html;
+            return txt.value;
         }
 
         function escapeHtml(unsafe) {
@@ -126,15 +132,14 @@
                 .replace(/&/g, "&amp;")
                 .replace(/</g, "&lt;")
                 .replace(/>/g, "&gt;")
-                .replace(/"/g, "&quot;")
-                .replace(/'/g, "&#039;");
+                .replace(/"/g, "&quot;");
         }
         Handlebars.registerHelper('escapeHtml', function(unsafe) {
             return new Handlebars.SafeString(escapeHtml(unsafe));
         });        
         // Define the Handlebars helper function
         Handlebars.registerHelper('endsWithSadFace', function(string, options) {
-            console.log("endsWithSadFace?", string)
+            // console.log("endsWithSadFace?", string)
             if (string.endsWith('🙁')) {
                 return options.fn(this);
             } else {
@@ -171,9 +176,10 @@
                 const safe = escapeHtml(answer);
                 answerElement.innerHTML = `
                     <input class="form-check-input" type="checkbox" value="\${index}" id="answer\${index}">
-                    <label class="form-check-label" for="answer\${index}">\${safe}</label>
+                    <label class="form-check-label" for="answer\${index}" id="labelanswer\${index}"></label>
                 `;
                 answersContainer.appendChild(answerElement);
+                document.getElementById(`labelanswer\${index}`).innerHTML = safe
             });
 
             startTimer();
@@ -225,7 +231,7 @@
                 },
                 body: JSON.stringify(studentAnswerData)
             }).then(response => response.text()).then(result => {
-                console.log('Partial result:', result);
+                // console.log('Partial result:', result);
             }).catch(error => console.error('Error:', error));
         }
 

@@ -1,6 +1,7 @@
 {
-    "id": "quizz16",
+    "id": "quizz06",
     "description": "Introduction to Java Generics",
+    "comment": "Only one valid answer per question",
     "questions": [
       {
         "question": "What is the main purpose of using generics in Java?",

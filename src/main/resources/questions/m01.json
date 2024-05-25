@@ -1,0 +1,91 @@
+{
+  "id": "java_quizz01",
+  "description": "Java Programming Fundamentals Quiz",
+  "questions": [
+    {
+      "question": "What are the fundamental building blocks of the Java language?",
+      "answers": [
+        "Variables, data types, control structures, methods, and classes",
+        "Functions, arrays, loops, and objects",
+        "Pointers, structs, and memory allocation",
+        "CSS, HTML, JavaScript, and PHP"
+      ],
+      "correct": [0]
+    },
+    {
+      "question": "Which of the following is an example of a Java data type?",
+      "answers": ["int", "float", "string", "all of the above"],
+      "correct": [0, 1]
+    },
+    {
+      "question": "What is the purpose of a Java method?",
+      "answers": [
+        "To define a new class",
+        "To declare a variable",
+        "To perform a specific task or action",
+        "To create an object"
+      ],
+      "correct": [2]
+    },
+    {
+      "question": "Which control flow structure in Java is used to execute a block of code repeatedly?",
+      "answers": ["if-else", "switch-case", "while loop", "for loop"],
+      "correct": [2, 3]
+    },
+    {
+      "question": "What is the concept of Object-Oriented Programming (OOP) in Java?",
+      "answers": [
+        "It is a programming paradigm that focuses on objects and classes",
+        "It involves writing code without using objects",
+        "It is only applicable to scripting languages",
+        "It&#39;s a technique to optimize code execution"
+      ],
+      "correct": [0]
+    },
+    {
+      "question": "Which of the following is NOT an OOP concept in Java?",
+      "answers": ["Class", "Interface", "Object", "Array"],
+      "correct": [3]
+    },
+    {
+      "question": "What is the purpose of a Java interface?",
+      "answers": [
+        "To define a blueprint for classes to implement",
+        "To represent a concrete implementation of a class",
+        "To store data",
+        "To perform mathematical operations"
+      ],
+      "correct": [0]
+    },
+    {
+      "question": "Which statement accurately describes Java syntax?",
+      "answers": [
+        "Java is case-sensitive",
+        "Java does not support object-oriented programming",
+        "Java allows the use of the &#39;goto&#39; statement",
+        "Java variables do not need to be declared before they are used"
+      ],
+      "correct": [0]
+    },
+    {
+      "question": "What is the purpose of the &#39;this&#39; keyword in Java?",
+      "answers": [
+        "To refer to the current class instance",
+        "To create a new object",
+        "To define a constant",
+        "To specify the superclass"
+      ],
+      "correct": [0]
+    },
+    {
+      "question": "Which of the following is a valid Java class declaration?",
+      "answers": [
+        "class MyClass { }",
+        "MyClass = new Class()",
+        "class = new MyClass()",
+        "class { }"
+      ],
+      "correct": [0]
+    }
+  ]
+}
