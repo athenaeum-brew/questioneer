@@ -1,12 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="com.cthiebaud.questioneer.QuestioneerWebSocketMessageType" %>
 <%@ page import="com.cthiebaud.questioneer.PartialAnswerServlet" %>
-<%!
-    // Get the type prefixes array from the enum 
-    String[] typePrefixes=QuestioneerWebSocketMessageType.getTypePrefixes(); 
-    // Convert the array to a comma-separated string
-    String typePrefixesString=String.join("', '", typePrefixes);
-%>
+<%@ page import="com.cthiebaud.questioneer.QuestioneerWebSocketMessageType" %>
+<%@ page import="java.util.Arrays" %>
+<%@ page import="java.util.stream.Stream" %>
 <!DOCTYPE html>
 <html>
 
@@ -76,9 +72,10 @@
         </div>
     </footer>    
     
-    <script>
-        // Define JavaScript array with type prefixes
-        const typePrefixes = [' <%=typePrefixesString %>'];
+    <script type="module">
+        // Define JavaScript array with enum values received from the server
+        // Perhaps one of the most horrible code I have ever seen
+        const typePrefixes = ['<%= String.join(":', '", Arrays.stream(QuestioneerWebSocketMessageType.values()).map(Enum::name).toArray(String[]::new)) %>:'];
 
         // Determine the WebSocket protocol based on the current page's protocol
         const protocol = window.location.protocol === "https:" ? "wss:" : "ws:"
