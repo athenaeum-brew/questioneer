@@ -24,7 +24,7 @@
 
 <body>
     <main class="container my-3">
-        <a href="<%= application.getContextPath()%>" style="float:right; text-decoration: none; font-size: 32px;">⌂</a>
+        <a href="<%= application.getContextPath()%>/" style="float:right; text-decoration: none; font-size: 32px;">⌂</a>
         <h1>Dashboard</h1>
     
         <!-- Active Sessions Card -->

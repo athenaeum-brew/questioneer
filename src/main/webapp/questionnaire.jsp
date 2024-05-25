@@ -53,7 +53,7 @@
 <body>
     <div class="container my-3">
         <div style="float:right;">
-            <a href="<%= application.getContextPath() %>" style="text-decoration: none; font-size: 32px;">⌂</a>
+            <a href="<%= application.getContextPath() %>/" style="text-decoration: none; font-size: 32px;">⌂</a>
             <a href="admin" target="_admin" style="text-decoration: none; font-size: 32px;">⬡</a>
         </div>
         <h1 id="questionnaire-title"></h1>
@@ -330,14 +330,36 @@
             return correctAnswers;
         }
 
+        function shuffleQuestion(questionObj) {
+            // Create an array of objects with answer and its original index
+            const answersWithIndex = questionObj.answers.map((answer, index) => ({ answer, index }));
+            
+            // Shuffle the array of objects
+            shuffle(answersWithIndex)
+            
+            // Extract the shuffled answers
+            questionObj.answers = answersWithIndex.map(obj => obj.answer);
+            
+            // Update the correct indices based on shuffled positions
+            questionObj.correct = questionObj.correct.map(correctIndex => 
+                answersWithIndex.findIndex(obj => obj.index === correctIndex)
+            );
+
+            return questionObj;
+        }
+
         function replay() {
             // Clear studentAnswers array
             studentAnswers = [];
+
+            // shuffle questions answers
+            questionnaire.questions.forEach(question => shuffleQuestion(question))
             
             // Reset currentQuestionIndex to 0
             currentQuestionIndex = 0;
             
             // Clear summary content
+            document.getElementById("next-button").innerText = "Next";
             document.getElementById('results').innerHTML = "&nbsp;"
             document.getElementById('summary').innerHTML = '';
             document.getElementById('summaryContainer').style.display = 'none'

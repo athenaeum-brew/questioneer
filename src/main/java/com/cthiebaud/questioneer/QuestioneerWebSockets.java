@@ -22,6 +22,9 @@ public enum QuestioneerWebSockets {
     }
 
     public void broadcast(QuestioneerWebSocketMessageType type, String message) {
+        if (activeWebSockets.size() == 0) {
+            return;
+        }
         System.out.println(
                 String.format("broadcasting message %s:%s to %d active web sockets",
                         type,
