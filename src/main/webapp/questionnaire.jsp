@@ -62,17 +62,17 @@
             <div class="card-body">
                 <h5 id="question" class="card-title"></h5>
                 <form id="answers" class="mb-3"></form>
-                <div class="progress">
-                    <div id="progress-bar" class="progress-bar" role="progressbar"></div>
-                </div>
                 <div class="d-flex justify-content-between align-items-center">
-                    <button id="next-button" class="btn btn-primary mt-3" onclick="nextQuestion()">Next</button>
+                    <button id="next-button" class="btn btn-primary" onclick="nextQuestion()">Next</button>
                     <div>
+                        <div id="results" style="text-align: end;">&nbsp;</div>
                         <div class="font-monospace" style="text-align: end;">
                             <span id="current">current</span>/<span id="total">total</span>
                         </div>
-                        <div id="results" style="text-align: end;"></div>
                     </div>
+                </div>
+                <div class="progress mt-3" style="height: .5rem;">
+                    <div id="progress-bar" class="progress-bar" role="progressbar" style="background-color: #c7c7c7;"></div>
                 </div>
             </div>
         </div>
@@ -338,7 +338,7 @@
             currentQuestionIndex = 0;
             
             // Clear summary content
-            document.getElementById('results').innerHTML = ""
+            document.getElementById('results').innerHTML = "&nbsp;"
             document.getElementById('summary').innerHTML = '';
             document.getElementById('summaryContainer').style.display = 'none'
 
