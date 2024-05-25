@@ -1,0 +1,108 @@
+{
+    "id": "quizz17",
+    "description": "Concurrency in Java",
+    "comment": "Only one valid answer per question",
+    "questions": [
+      {
+        "question": "What is the purpose of the `synchronized` keyword in Java?",
+        "answers": [
+          "To improve the performance of a program.",
+          "To ensure that a method can only be accessed by one thread at a time.",
+          "To make a method static.",
+          "To create a new thread."
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "Which class should you use if you need a thread-safe, bounded buffer in Java?",
+        "answers": [
+          "ArrayList",
+          "LinkedList",
+          "ArrayBlockingQueue",
+          "HashMap"
+        ],
+        "correct": [2]
+      },
+      {
+        "question": "What does the `volatile` keyword ensure when applied to a variable?",
+        "answers": [
+          "The variable is immutable.",
+          "The variable is thread-safe.",
+          "Changes to the variable are always visible to all threads.",
+          "The variable is shared between classes."
+        ],
+        "correct": [2]
+      },
+      {
+        "question": "Which method can be used to make a thread wait for another thread to finish its execution?",
+        "answers": [
+          "Thread.sleep()",
+          "Thread.join()",
+          "Thread.wait()",
+          "Thread.notify()"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "Which interface must be implemented by a class whose instances are intended to be executed by a thread?",
+        "answers": [
+          "Runnable",
+          "Callable",
+          "Thread",
+          "Executor"
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "Which of the following is a correct way to start a thread?",
+        "answers": [
+          "new Thread(new Runnable()).run();",
+          "new Thread(new Runnable()).start();",
+          "new Runnable().start();",
+          "Thread.start(new Runnable());"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "What is the result of calling `Future.get()` on a `Future` object?",
+        "answers": [
+          "The result of the computation when it is completed.",
+          "A new thread.",
+          "The current state of the thread.",
+          "An exception is always thrown."
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "What does the `ReentrantLock` class provide that `synchronized` does not?",
+        "answers": [
+          "Fairness policy.",
+          "Thread safety.",
+          "Atomicity.",
+          "Performance improvement."
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "Which of the following is not a benefit of using the `ExecutorService` framework?",
+        "answers": [
+          "Easy management of thread life cycles.",
+          "Simplified asynchronous task execution.",
+          "Improved readability and maintainability of code.",
+          "Automatic management of `synchronized` blocks."
+        ],
+        "correct": [3]
+      },
+      {
+        "question": "What happens if a thread calls `wait()` on an object?",
+        "answers": [
+          "It immediately returns from the method.",
+          "It goes into a waiting state until another thread calls `notify()` or `notifyAll()` on the same object.",
+          "It is terminated.",
+          "It throws an `InterruptedException`."
+        ],
+        "correct": [1]
+      }
+    ]
+  }
+  

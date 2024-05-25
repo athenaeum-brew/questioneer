@@ -1,0 +1,107 @@
+{
+    "id": "quizz16",
+    "description": "Introduction to Java Generics",
+    "questions": [
+      {
+        "question": "What is the main purpose of using generics in Java?",
+        "answers": [
+          "To ensure type safety at compile time.",
+          "To allow for code reusability.",
+          "To enable dynamic type checking.",
+          "To improve runtime performance."
+        ],
+        "correct": [0, 1]
+      },
+      {
+        "question": "Which of the following is a correct way to define a generic class?",
+        "answers": [
+          "public class Box<T> {}",
+          "public class <T>Box {}",
+          "public <T> class Box {}",
+          "public class Box { T t; }"
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "Which of these statements about Java generics is true?",
+        "answers": [
+          "Generics can be used with primitive types.",
+          "Generics provide type information at runtime through type erasure.",
+          "You cannot create instances of a generic type parameter.",
+          "Generics allow for parameterized types."
+        ],
+        "correct": [2, 3]
+      },
+      {
+        "question": "How do you create a generic method in Java?",
+        "answers": [
+          "public <T> void genericMethod(T t) {}",
+          "public void <T> genericMethod(T t) {}",
+          "public <T> T genericMethod(T t) {}",
+          "public <T extends Number> void genericMethod(T t) {}"
+        ],
+        "correct": [0, 2, 3]
+      },
+      {
+        "question": "What does the diamond operator <> do in Java?",
+        "answers": [
+          "It allows the compiler to infer the type arguments.",
+          "It creates a new generic type.",
+          "It ensures type safety at runtime.",
+          "It eliminates the need to explicitly specify the type parameters on the right-hand side."
+        ],
+        "correct": [0, 3]
+      },
+      {
+        "question": "Which of the following declarations are valid in Java?",
+        "answers": [
+          "List<?> list = new ArrayList<String>();",
+          "List<? extends Number> list = new ArrayList<Integer>();",
+          "List<String> list = new ArrayList<>();",
+          "List<? super Integer> list = new ArrayList<Number>();"
+        ],
+        "correct": [0, 1, 2, 3]
+      },
+      {
+        "question": "Which type bounds are correctly specified?",
+        "answers": [
+          "<T extends Comparable<T>>",
+          "<T super Number>",
+          "<T extends List<T> & Comparable<T>>",
+          "<T extends Number & List<T>>"
+        ],
+        "correct": [0, 2]
+      },
+      {
+        "question": "What are the limitations of Java generics?",
+        "answers": [
+          "Generics do not support primitive types.",
+          "You cannot create instances of a type parameter.",
+          "Generics provide runtime type information.",
+          "You cannot cast to a generic type."
+        ],
+        "correct": [0, 1, 3]
+      },
+      {
+        "question": "What is type erasure in Java generics?",
+        "answers": [
+          "It is the process by which explicit type information is removed at runtime.",
+          "It ensures backward compatibility with legacy code.",
+          "It allows the use of primitive types with generics.",
+          "It converts generic types to their raw types during compilation."
+        ],
+        "correct": [0, 1, 3]
+      },
+      {
+        "question": "Which of the following is true about bounded type parameters in Java generics?",
+        "answers": [
+          "They limit the types that can be used as type arguments.",
+          "They can include multiple bounds using the & symbol.",
+          "They ensure the type arguments are subclasses of the specified bounds.",
+          "They can only be used with classes, not interfaces."
+        ],
+        "correct": [0, 1, 2]
+      }
+    ]
+  }
+  

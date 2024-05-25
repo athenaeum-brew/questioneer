@@ -18,6 +18,10 @@
         .progress-bar {
             width: 100%;
         }
+
+        .wrong {
+            text-decoration: line-through;
+        }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
     <script id="question-summary-template" type="text/x-handlebars-template">
@@ -27,7 +31,7 @@
                 <p><strong>Correct Answer(s):</strong> 
                     <ul>
                     {{#each correctAnswersSummary}}
-                        <li>{{{this}}}</li>
+                        <li>{{{escapeHtml this}}}</li>
                     {{/each}}
                     </ul>
                 </p>
@@ -35,7 +39,7 @@
                 <p><strong>Your Answer(s):</strong>
                     <ul>
                     {{#each studentAnswersSummary}}
-                        <li>{{{this}}}</li>
+                        <li class="{{#endsWithSadFace this}}wrong{{/endsWithSadFace}}">{{{escapeHtml this}}}</li>
                     {{/each}}
                     </ul>
                 </p>
@@ -53,6 +57,7 @@
             <a href="admin" target="_admin" style="text-decoration: none; font-size: 32px;">⬡</a>
         </div>
         <h1 id="questionnaire-title"></h1>
+        <p id="questionnaire-comment" style="font-style: italic;"></p>
         <div id="questionnaire" class="card">
             <div class="card-body">
                 <h5 id="question" class="card-title"></h5>
@@ -62,8 +67,11 @@
                 </div>
                 <div class="d-flex justify-content-between align-items-center">
                     <button id="next-button" class="btn btn-primary mt-3" onclick="nextQuestion()">Next</button>
-                    <div class="font-monospace">
-                        <span id="current">current</span>/<span id="total">total</span>
+                    <div>
+                        <div class="font-monospace" style="text-align: end;">
+                            <span id="current">current</span>/<span id="total">total</span>
+                        </div>
+                        <div id="results" style="text-align: end;"></div>
                     </div>
                 </div>
             </div>
@@ -85,6 +93,7 @@
         let nextButton;
         let studentAnswers = [];
         let questionnaireTitle;
+        let questionnaireComment;
 
         // https://bost.ocks.org/mike/shuffle/
         function shuffle(array) {
@@ -112,6 +121,27 @@
             return quizz;
         }
 
+        function escapeHtml(unsafe) {
+            return unsafe
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+        Handlebars.registerHelper('escapeHtml', function(unsafe) {
+            return new Handlebars.SafeString(escapeHtml(unsafe));
+        });        
+        // Define the Handlebars helper function
+        Handlebars.registerHelper('endsWithSadFace', function(string, options) {
+            console.log("endsWithSadFace?", string)
+            if (string.endsWith('🙁')) {
+                return options.fn(this);
+            } else {
+                return options.inverse(this);
+            }
+        });        
+
         function showQuestionnaire() {
             clearInterval(timer);
             timeLeft = 60;
@@ -138,9 +168,10 @@
             question.answers.forEach((answer, index) => {
                 const answerElement = document.createElement('div');
                 answerElement.classList.add('form-check');
+                const safe = escapeHtml(answer);
                 answerElement.innerHTML = `
                     <input class="form-check-input" type="checkbox" value="\${index}" id="answer\${index}">
-                    <label class="form-check-label" for="answer\${index}">\${answer}</label>
+                    <label class="form-check-label" for="answer\${index}">\${safe}</label>
                 `;
                 answersContainer.appendChild(answerElement);
             });
@@ -182,6 +213,8 @@
                 isCorrect: checkStudentAnswers(question.correct, selectedAnswers)
             };
 
+            document.getElementById('results').innerHTML += studentAnswerData.isCorrect ? ' ✅' : ' ❌';
+
             studentAnswers.push(studentAnswerData);
 
             // Post the answer to the server
@@ -215,13 +248,24 @@
             progressBar = document.getElementById('progress-bar');
             nextButton = document.getElementById('next-button');
             questionnaireTitle = document.getElementById('questionnaire-title');
+            questionnaireComment = document.getElementById('questionnaire-comment');
             questionnaire = loadQuestionnaire();
             showQuestionnaireTitle(questionnaire.description);
+            showQuestionnaireComment(questionnaire.comment);
             showQuestionnaire();
         });
 
         function showQuestionnaireTitle(description) {
             questionnaireTitle.innerText = description;
+        }
+
+        function showQuestionnaireComment(comment) {
+            if (comment) {
+                questionnaireComment.style.display = 'block'
+                questionnaireComment.innerText = comment;
+            } else {
+                questionnaireComment.style.display = 'none'
+            } 
         }
 
         const questionSummaryTemplate = Handlebars.compile(document.getElementById('question-summary-template').innerHTML);
@@ -269,12 +313,12 @@
 
         function getStudentAnswersSummary(question, studentAnswer) {
             if (studentAnswer.length == 0)
-                return ["<i>No Answer given.</i>"]
+                return ["No Answer given."]
             const studentAnswersSum = studentAnswer.map(index => {
                 if (question.correct.includes(index)) {
                     return question.answers[index]
                 } else {
-                    return "<s>"+question.answers[index]+"</s>"
+                    return question.answers[index] + " 🙁"
                 }
             });
             return studentAnswersSum;
@@ -292,8 +336,9 @@
             
             // Reset currentQuestionIndex to 0
             currentQuestionIndex = 0;
-
+            
             // Clear summary content
+            document.getElementById('results').innerHTML = ""
             document.getElementById('summary').innerHTML = '';
             document.getElementById('summaryContainer').style.display = 'none'
 
