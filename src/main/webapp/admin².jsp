@@ -1,18 +1,9 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <%@ include file="header.jspf" %>
-
-        <title>Dashboard</title>
-
-        <style>
-            .custom-progress-bar {
-                background-color: #28a745 !important;
-            }
-        </style>
+    <title>Dashboard&sup2;</title>
 </head>
-
 <body>
     <main class="container d-flex justify-content-evenly">
         <div>

@@ -10,12 +10,6 @@
     <%@ include file="header.jspf" %>    
 
     <title>Dashboard</title>
-
-    <style>
-        .custom-progress-bar {
-            background-color: #28a745 !important;
-        }
-    </style>
 </head>
 
 <body>
@@ -58,7 +52,9 @@
                     </tbody>
                 </table>
                 <div class="progress my-3" style="height: 30px;">
-                    <div id="progressBar" class="progress-bar custom-progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div id="progressBar" class="progress-bar custom-progress-bar" role="progressbar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+                    style="width: 0%;background-color: #28a745 !important" ></div>
                 </div>                
                 <button id="resetButton" class="btn btn-secondary">Reset ✅ and ❌ Counters</button>
             </div>
