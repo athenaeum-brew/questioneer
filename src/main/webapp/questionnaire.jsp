@@ -1,6 +1,3 @@
-<%@ page import="org.json.simple.JSONObject, org.json.simple.parser.JSONParser" %>
-<%@ page import="java.io.InputStream, java.io.InputStreamReader, java.nio.charset.StandardCharsets" %>
-<%@ page import="java.net.URL, java.util.Scanner" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,6 +17,11 @@
 
         .wrong {
             text-decoration: line-through;
+        }
+
+        #navbar a {
+            text-decoration: none; 
+            font-size: 32px;
         }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
@@ -51,9 +53,9 @@
 
 <body>
     <div class="container my-3">
-        <div style="float:right;">
-            <a href="${normalizedContextPath}" style="text-decoration: none; font-size: 32px;">⌂</a>
-            <a href="${normalizedContextPath}admin" target="_admin" style="text-decoration: none; font-size: 32px;">⬡</a>
+        <div id="navbar" class="float-end">
+            <a href="${normalizedContextPath}">⌂</a>
+            <a href="${normalizedContextPath}admin" target="_admin">⬡</a>
         </div>
         <h1 id="questionnaire-title"></h1>
         <p id="questionnaire-comment" style="font-style: italic;"></p>

@@ -1,44 +1,43 @@
 .
 ├── pom.xml
-├── src
-│   └── main
-│       ├── java
-│       │   └── com
-│       │       └── cthiebaud
-│       │           └── questioneer
-│       │               ├── AdminServlet.java
-│       │               ├── PartialAnswerServlet.java
-│       │               ├── QuestioneerContextListener.java
-│       │               ├── QuestioneerSessionListener.java
-│       │               ├── QuestioneerWebSocket.java
-│       │               ├── QuestioneerWebSocketMessageType.java
-│       │               ├── QuestioneerWebSockets.java
-│       │               ├── QuestionnaireRecord.java
-│       │               ├── QuestionnaireServlet.java
-│       │               ├── Questionnaires.java
-│       │               └── SubmitAnswersServlet.java
-│       ├── resources
-│       │   └── questions
-│       │       ├── 01.json
-│       │       ├── 03.json
-│       │       ├── 06.json
-│       │       ├── 07.json
-│       │       ├── 09.json
-│       │       ├── 15.json
-│       │       ├── 16.json
-│       │       ├── 17.json
-│       │       ├── 23.json
-│       │       ├── 24.json
-│       │       ├── foot.json
-│       │       └── test.json
-│       └── webapp
-│           ├── admin.jsp
-│           ├── admin².jsp
-│           ├── favicon.ico
-│           ├── header.jspf
-│           ├── hello.txt
-│           ├── index.jsp
-│           └── questionnaire.jsp
-└── tree_,sh
+└── src
+    └── main
+        ├── java
+        │   └── com
+        │       └── cthiebaud
+        │           └── questioneer
+        │               ├── AdminServlet.java
+        │               ├── PartialAnswerServlet.java
+        │               ├── QuestioneerContextListener.java
+        │               ├── QuestioneerSessionListener.java
+        │               ├── QuestioneerWebSocket.java
+        │               ├── QuestioneerWebSocketMessageType.java
+        │               ├── QuestioneerWebSockets.java
+        │               ├── QuestionnaireRecord.java
+        │               ├── QuestionnaireServlet.java
+        │               ├── Questionnaires.java
+        │               └── SubmitAnswersServlet.java
+        ├── resources
+        │   └── questions
+        │       ├── 01.json
+        │       ├── 03.json
+        │       ├── 06.json
+        │       ├── 07.json
+        │       ├── 09.json
+        │       ├── 15.json
+        │       ├── 16.json
+        │       ├── 17.json
+        │       ├── 23.json
+        │       ├── 24.json
+        │       ├── foot.json
+        │       └── test.json
+        └── webapp
+            ├── admin.jsp
+            ├── admin².jsp
+            ├── favicon.ico
+            ├── header.jspf
+            ├── hello.txt
+            ├── index.jsp
+            └── questionnaire.jsp
 
-10 directories, 32 files
+10 directories, 31 files
