@@ -1,6 +1,6 @@
 {
-  "id": "java_quizz01",
-  "description": "Java Programming Fundamentals Quiz",
+  "id": "01",
+  "description": "Introduction to Java Programming",
   "questions": [
     {
       "question": "What are the fundamental building blocks of the Java language?",
@@ -38,7 +38,7 @@
         "It is a programming paradigm that focuses on objects and classes",
         "It involves writing code without using objects",
         "It is only applicable to scripting languages",
-        "It&#39;s a technique to optimize code execution"
+        "It's a technique to optimize code execution"
       ],
       "correct": [0]
     },
@@ -62,13 +62,13 @@
       "answers": [
         "Java is case-sensitive",
         "Java does not support object-oriented programming",
-        "Java allows the use of the &#39;goto&#39; statement",
+        "Java allows the use of the 'goto' statement",
         "Java variables do not need to be declared before they are used"
       ],
       "correct": [0]
     },
     {
-      "question": "What is the purpose of the &#39;this&#39; keyword in Java?",
+      "question": "What is the purpose of the 'this' keyword in Java?",
       "answers": [
         "To refer to the current class instance",
         "To create a new object",

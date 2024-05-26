@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Questionnaires",
+            "request": "launch",
+            "mainClass": "com.cthiebaud.questioneer.Questionnaires",
+            "projectName": "questioneer"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"

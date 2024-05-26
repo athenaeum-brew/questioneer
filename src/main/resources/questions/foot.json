@@ -1,0 +1,107 @@
+{
+    "id": "generic_football_quiz",
+    "description": "Generic Football (Soccer) Quiz",
+    "questions": [
+      {
+        "question": "Which country has won the most FIFA World Cup titles?",
+        "answers": [
+          "Brazil",
+          "Germany",
+          "Italy",
+          "Argentina"
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "Which player has scored the most goals in the history of the UEFA Champions League?",
+        "answers": [
+          "Lionel Messi",
+          "Cristiano Ronaldo",
+          "Raúl",
+          "Karim Benzema"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "Which club has won the most English Premier League titles?",
+        "answers": [
+          "Manchester United",
+          "Liverpool",
+          "Arsenal",
+          "Chelsea"
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "Which player has won the most FIFA Ballon d'Or awards?",
+        "answers": [
+          "Lionel Messi",
+          "Cristiano Ronaldo",
+          "Michel Platini",
+          "Johan Cruyff"
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "Which national team has won the most UEFA European Championship titles?",
+        "answers": [
+          "Germany",
+          "Spain",
+          "France",
+          "Italy"
+        ],
+        "correct": [3]
+      },
+      {
+        "question": "Which club has won the most UEFA Champions League titles?",
+        "answers": [
+          "Real Madrid",
+          "Barcelona",
+          "Bayern Munich",
+          "Liverpool"
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "Who is the all-time top scorer for the English national team?",
+        "answers": [
+          "Bobby Charlton",
+          "Wayne Rooney",
+          "Gary Lineker",
+          "Alan Shearer"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "Which player has won the most FIFA World Cup titles?",
+        "answers": [
+          "Pelé",
+          "Diego Maradona",
+          "Zinedine Zidane",
+          "Franz Beckenbauer"
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "Which goalkeeper has won the most FIFA World Cup Golden Glove awards?",
+        "answers": [
+          "Manuel Neuer",
+          "Gianluigi Buffon",
+          "Iker Casillas",
+          "Oliver Kahn"
+        ],
+        "correct": [2]
+      },
+      {
+        "question": "Who is the only player to have scored in a UEFA Champions League final, a FIFA World Cup final, and an Olympic final?",
+        "answers": [
+          "Pele",
+          "Diego Maradona",
+          "Zinedine Zidane",
+          "Puskás"
+        ],
+        "correct": [2]
+      }
+    ]
+  }
+  

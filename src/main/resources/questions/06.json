@@ -1,6 +1,6 @@
 {
-    "id": "quizz06",
-    "description": "Introduction to Java Generics",
+    "id": "06",
+    "description": "Java Generics",
     "questions": [
       {
         "question": "What is the main purpose of using generics in Java?",

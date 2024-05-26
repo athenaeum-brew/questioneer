@@ -1,0 +1,106 @@
+{
+  "id": "07",
+  "description": "Java Collections",
+  "questions": [
+    {
+      "question": "What is the Java Collections Framework?",
+      "answers": [
+        "A set of interfaces and classes to store and manipulate collections of objects",
+        "A framework for building web applications in Java",
+        "A set of tools for database management",
+        "A library for graphical user interface development"
+      ],
+      "correct": [0]
+    },
+    {
+      "question": "What is the main reason to use arrays over collections in Java?",
+      "answers": [
+        "When efficiency is critical",
+        "For better readability",
+        "For easier debugging",
+        "For more built-in methods"
+      ],
+      "correct": [0]
+    },
+    {
+      "question": "Which interface represents an ordered collection that allows duplicate entries?",
+      "answers": [
+        "Set",
+        "Map",
+        "List",
+        "Collection"
+      ],
+      "correct": [2]
+    },
+    {
+      "question": "Which interface in the Java Collections Framework represents a collection of unique elements?",
+      "answers": [
+        "List",
+        "Set",
+        "Map",
+        "Queue"
+      ],
+      "correct": [1]
+    },
+    {
+      "question": "Which interface represents a mapping between keys and values?",
+      "answers": [
+        "List",
+        "Set",
+        "Map",
+        "Collection"
+      ],
+      "correct": [2]
+    },
+    {
+      "question": "Which class implements the List interface and provides dynamic array functionality?",
+      "answers": [
+        "HashMap",
+        "HashSet",
+        "ArrayList",
+        "TreeSet"
+      ],
+      "correct": [2]
+    },
+    {
+      "question": "What is a key characteristic of the Set interface?",
+      "answers": [
+        "It allows duplicate elements",
+        "It maintains the order of elements",
+        "It does not allow duplicate elements",
+        "It provides positional access to elements"
+      ],
+      "correct": [2]
+    },
+    {
+      "question": "Which method is used to add an element to a collection in Java?",
+      "answers": [
+        "insert()",
+        "add()",
+        "put()",
+        "append()"
+      ],
+      "correct": [1]
+    },
+    {
+      "question": "What is an example of a method provided by the Java Collections for searching elements?",
+      "answers": [
+        "find()",
+        "search()",
+        "contains()",
+        "lookup()"
+      ],
+      "correct": [2]
+    },
+    {
+      "question": "Which implementation of the Set interface stores elements in a hash table for fast retrieval?",
+      "answers": [
+        "TreeSet",
+        "LinkedHashSet",
+        "HashSet",
+        "PriorityQueue"
+      ],
+      "correct": [2]
+    }
+  ]
+}

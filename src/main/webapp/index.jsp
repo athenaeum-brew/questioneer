@@ -39,22 +39,15 @@
                 </tr>
             </thead>
             <tbody>
-                <c:forEach var="file" items="${jspFiles}">
-                    <!-- Extract the number using substring and indexOf functions -->
-                    <c:set var="mIndex" value="${fn:indexOf(file, 'm')}" />
-                    <c:set var="dotIndex" value="${fn:indexOf(file, '.jsp')}" />
-                    <c:set var="number" value="${fn:substring(file, mIndex + 1, dotIndex)}" />
-                    
-                    <!-- Construct the module string and the lecture link -->
-                    <c:set var="slidesString" value="Slides ${number}" />
-                    <c:set var="quizzString" value="Quizz ${number}" />
-                    <c:set var="lectureLink" value="https://athenaeum.cthiebaud.com/slides/?${number}.md" />
-                    
-                    <!-- Display the row in the table -->
-                    <tr id="tr${number}">
-                        <td><a href="${lectureLink}">${slidesString}</a></td>
-                        <td>&nbsp;</td>
-                        <td><a href="${file}">${quizzString}</a></td>
+                <c:forEach var="questionnaire" items="${questionnaires}">
+
+                    <c:set var="_id_" value="${questionnaire.id()}" />
+                    <c:set var="_title_" value="${questionnaire.title()}" />
+
+                    <tr id="tr${_id_}">
+                        <td>${_title_}</td>
+                        <td><a href="https://athenaeum.cthiebaud.com/slides/?${_id_}.md">Slides ${_id_}</a></td>
+                        <td><a href="q/${_id_}">Quizz ${_id_}</a></td>
                     </tr>
                 </c:forEach>
             </tbody>

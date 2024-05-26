@@ -4,7 +4,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <%@ include file="header.jspf" %>    
 
@@ -115,8 +114,8 @@
         }        
 
         function loadQuestionnaire() {
-            const questionnaireJson = decodeHtmlEntities('<%= getQuestionnaireJson(request.getParameter("file")) %>');
-            const quizz = JSON.parse(questionnaireJson);
+            const quizz = <%= request.getAttribute("questionnaire") %>;
+
             shuffle(quizz.questions);
             // shuffle questions answers
             quizz.questions.forEach(question => shuffleQuestion(question))            
@@ -415,33 +414,3 @@
 </body>
 
 </html>
-
-<%! 
-public String getQuestionnaireJson(String file) { 
-    if (file == null || file.isEmpty()) {
-        return "{}";
-    }
-    JSONParser parser = new JSONParser();
-    try {
-        // Load the file from the classpath
-        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("/questions/" + file);
-        if (inputStream == null) {
-            return "{}";
-        }
-        
-        // Convert InputStream to InputStreamReader
-        InputStreamReader reader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
-        
-        // Parse the JSON file
-        JSONObject questionnaireJson = (JSONObject) parser.parse(reader);
-        
-        // Close the input stream
-        inputStream.close();
-        
-        return questionnaireJson.toJSONString();
-    } catch (Exception e) {
-        e.printStackTrace();
-        return "{}";
-    }
-} 
-%>
