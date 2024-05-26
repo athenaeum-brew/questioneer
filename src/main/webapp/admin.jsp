@@ -14,7 +14,7 @@
 
 <body>
     <main class="container my-3">
-        <a href="<%= application.getContextPath()%>/" style="float:right; text-decoration: none; font-size: 32px;">⌂</a>
+        <a href="${normalizedContextPath}" style="float:right; text-decoration: none; font-size: 32px;">⌂</a>
         <h1>Dashboard</h1>
     
         <!-- Active Sessions Card -->
@@ -76,7 +76,7 @@
         // Determine the WebSocket protocol based on the current page's protocol
         const protocol = window.location.protocol === "https:" ? "wss:" : "ws:"
         // Check if the current URL contains "/questioneer"
-        const path = window.location.pathname.includes("/questioneer") ? "/questioneer/ws" : "/ws"
+        const path = "${normalizedContextPath}ws"
         const socket = new WebSocket(protocol + "//" + window.location.host + path)
         const activeSessionsElement = document.getElementById("activeSessions")
         const goodAnswersElement = document.getElementById("goodAnswers")

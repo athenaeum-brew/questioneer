@@ -52,8 +52,8 @@
 <body>
     <div class="container my-3">
         <div style="float:right;">
-            <a href="<%= application.getContextPath() %>/" style="text-decoration: none; font-size: 32px;">⌂</a>
-            <a href="admin" target="_admin" style="text-decoration: none; font-size: 32px;">⬡</a>
+            <a href="${normalizedContextPath}" style="text-decoration: none; font-size: 32px;">⌂</a>
+            <a href="${normalizedContextPath}admin" target="_admin" style="text-decoration: none; font-size: 32px;">⬡</a>
         </div>
         <h1 id="questionnaire-title"></h1>
         <p id="questionnaire-comment" style="font-style: italic;"></p>
@@ -225,7 +225,7 @@
             studentAnswers.push(studentAnswerData);
 
             // Post the answer to the server
-            fetch('partial', {
+            fetch('${normalizedContextPath}partial', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -238,7 +238,7 @@
 
         function submitAnswers() {
             clearInterval(timer);
-            fetch('submitAnswers', {
+            fetch('${normalizedContextPath}submitAnswers', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

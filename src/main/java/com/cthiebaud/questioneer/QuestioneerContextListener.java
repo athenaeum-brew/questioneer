@@ -13,6 +13,8 @@ public class QuestioneerContextListener implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent sce) {
         ServletContext context = sce.getServletContext();
+
+        context.setAttribute("normalizedContextPath", normalizePath(context.getContextPath()));
         context.setAttribute("questionnaires", List.copyOf(Questionnaires.INSTANCE.questionnaires));
     }
 
@@ -20,5 +22,13 @@ public class QuestioneerContextListener implements ServletContextListener {
     public void contextDestroyed(ServletContextEvent sce) {
         ServletContext context = sce.getServletContext();
         context.removeAttribute("questionnaires");
+        context.removeAttribute("normalizedContextPath");
+    }
+
+    private static String normalizePath(String path) {
+        if (!path.endsWith("/")) {
+            path += "/";
+        }
+        return path;
     }
 }
