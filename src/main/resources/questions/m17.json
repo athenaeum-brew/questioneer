@@ -1,7 +1,6 @@
 {
     "id": "quizz17",
     "description": "Concurrency in Java",
-    "comment": "Only one valid answer per question",
     "questions": [
       {
         "question": "What is the purpose of the `synchronized` keyword in Java?",

@@ -1,7 +1,6 @@
 {
     "id": "quizz24",
     "description": "Java Servlet/JSP Programming Quiz",
-    "comment": "Only one valid answer per question",
     "questions": [
       {
         "question": "Which of the following best describes a Java servlet?",

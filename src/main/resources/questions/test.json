@@ -3,6 +3,11 @@
   "description": "Test Questionnaire",
   "questions": [
     {
+      "question": "Extreme cas. no valid answer.",
+      "answers": ["false", "null", "nisba", "que dalle"],
+      "correct": []
+    },
+    {
       "question": "What is the capital of France?",
       "answers": ["Paris", "London", "Berlin", "Madrid"],
       "correct": [0]

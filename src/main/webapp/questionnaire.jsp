@@ -118,6 +118,8 @@
             const questionnaireJson = decodeHtmlEntities('<%= getQuestionnaireJson(request.getParameter("file")) %>');
             const quizz = JSON.parse(questionnaireJson);
             shuffle(quizz.questions);
+            // shuffle questions answers
+            quizz.questions.forEach(question => shuffleQuestion(question))            
             return quizz;
         }
 
@@ -257,9 +259,41 @@
             questionnaireComment = document.getElementById('questionnaire-comment');
             questionnaire = loadQuestionnaire();
             showQuestionnaireTitle(questionnaire.description);
-            showQuestionnaireComment(questionnaire.comment);
+            printCorrectAnswerRange(calculateCorrectAnswerRange(questionnaire));
+            printCorrectAnswerRange
             showQuestionnaire();
         });
+
+        function calculateCorrectAnswerRange(quiz) {
+            let minCorrectAnswers = Infinity;
+            let maxCorrectAnswers = -Infinity;
+
+            quiz.questions.forEach(question => {
+                const numCorrectAnswers = question.correct.length;
+                if (numCorrectAnswers < minCorrectAnswers) {
+                minCorrectAnswers = numCorrectAnswers;
+                }
+                if (numCorrectAnswers > maxCorrectAnswers) {
+                maxCorrectAnswers = numCorrectAnswers;
+                }
+            });
+
+            return {
+                min: minCorrectAnswers,
+                max: maxCorrectAnswers
+            };
+            }
+
+        function printCorrectAnswerRange(range) {
+            let comment;
+            if (range.min === 1 && range.max === 1) {
+                comment = "Only one correct answer per question";
+            } else {
+                comment = `From \${range.min} to \${range.max} correct answers per question`;
+            }
+            showQuestionnaireComment(comment);
+        }
+
 
         function showQuestionnaireTitle(description) {
             questionnaireTitle.innerText = description;

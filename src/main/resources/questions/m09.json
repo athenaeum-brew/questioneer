@@ -1,7 +1,6 @@
 {
     "id": "quizz09",
     "description": "Java Streams",
-    "comment": "Only one valid answer per question",
     "questions": [
       {
         "question": "What is a Java Stream?",
