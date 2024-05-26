@@ -125,6 +125,7 @@
                 progressBar.innerText = '';
             }            
         }        
+        updateProgressBar();
 
         // Add event listener to the button
         document.getElementById("resetButton").addEventListener("click", function () {
