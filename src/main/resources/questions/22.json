@@ -1,0 +1,106 @@
+{
+  "id": "22",
+  "description": "Web Servers Generalities",
+  "questions": [
+    {
+      "question": "What is a notable feature of Node.js?",
+      "answers": [
+        "It uses a blocking I/O model.",
+        "It has an event-driven architecture.",
+        "It is designed for front-end development only.",
+        "It excels in real-time applications."
+      ],
+      "correct": [1, 3]
+    },
+    {
+      "question": "Which Python frameworks are mentioned for web development?",
+      "answers": [
+        "Django",
+        "Flask",
+        "Spring",
+        "Laravel"
+      ],
+      "correct": [0, 1]
+    },
+    {
+      "question": "Which of the following is true about PHP?",
+      "answers": [
+        "It is primarily used for desktop applications.",
+        "It is known for its ease of use and extensive documentation.",
+        "It is often used with frameworks like Laravel.",
+        "It has declined in popularity but is still significant in web development."
+      ],
+      "correct": [1, 2, 3]
+    },
+    {
+      "question": "Why is Java often used for large-scale enterprise web applications?",
+      "answers": [
+        "It has robust security features.",
+        "It is known for rapid prototyping.",
+        "Frameworks like Spring enhance its suitability.",
+        "It has a perception of being outdated."
+      ],
+      "correct": [0, 2]
+    },
+    {
+      "question": "What are the reasons for Java's declining popularity in some web development contexts?",
+      "answers": [
+        "Complexity and verbosity",
+        "Slower development speed",
+        "Higher performance overhead",
+        "Lack of security features"
+      ],
+      "correct": [0, 1, 2]
+    },
+    {
+      "question": "What is an advantage of using Ruby on Rails?",
+      "answers": [
+        "Emphasizes convention over configuration",
+        "Offers rapid development",
+        "Widely used for enterprise-level applications",
+        "Has high performance for Windows-based applications"
+      ],
+      "correct": [0, 1]
+    },
+    {
+      "question": "Which language is primarily used with the .NET framework?",
+      "answers": [
+        "JavaScript",
+        "Python",
+        "C#",
+        "Ruby"
+      ],
+      "correct": [2]
+    },
+    {
+      "question": "What does HTML provide in web development?",
+      "answers": [
+        "The structure and content of a webpage",
+        "The styling and layout of a webpage",
+        "The interactive functionality of a webpage",
+        "The server-side logic of a webpage"
+      ],
+      "correct": [0]
+    },
+    {
+      "question": "What is the role of CSS in web development?",
+      "answers": [
+        "To create interactive and dynamic functionality",
+        "To describe the presentation of a document",
+        "To handle server-side programming",
+        "To structure the content of a webpage"
+      ],
+      "correct": [1]
+    },
+    {
+      "question": "Which of the following statements about JavaScript is true?",
+      "answers": [
+        "It is a high-level programming language.",
+        "It is only used for server-side scripting.",
+        "It can manipulate HTML content and handle events.",
+        "It cannot be embedded within HTML documents."
+      ],
+      "correct": [0, 2]
+    }
+  ]
+}

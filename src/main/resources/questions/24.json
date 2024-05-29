@@ -1,106 +1,106 @@
 {
-    "id": "24",
-    "description": "Java Servlet/JSP Programming Quiz",
+    "id": "18",
+    "description": "REST (Representational State Transfer)",
     "questions": [
       {
-        "question": "Which of the following best describes a Java servlet?",
+        "question": "What does REST stand for?",
         "answers": [
-          "A server-side Java program that dynamically processes requests and generates dynamic web pages.",
-          "A client-side Java program that runs in a web browser.",
-          "A Java program that handles database operations on the server-side.",
-          "A Java program that compiles HTML files into executable code."
+          "Remote Execution and State Transfer",
+          "Representational State Transfer",
+          "Resource Execution State Transfer",
+          "Reliable Event State Transfer"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "Which HTTP method is typically used to create a new resource in a RESTful service?",
+        "answers": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "What is a key characteristic of RESTful services?",
+        "answers": [
+          "They use SOAP for message formatting.",
+          "They maintain session state on the server.",
+          "They are stateless.",
+          "They require XML for data exchange."
+        ],
+        "correct": [2]
+      },
+      {
+        "question": "Which HTTP method is used to retrieve data from a RESTful service?",
+        "answers": [
+          "POST",
+          "GET",
+          "PUT",
+          "DELETE"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "In REST, what does it mean for a service to be stateless?",
+        "answers": [
+          "The service does not store client context between requests.",
+          "The service can handle multiple states of a resource.",
+          "The service uses a state machine for request processing.",
+          "The service stores state information on the client side."
         ],
         "correct": [0]
       },
       {
-        "question": "What is the main function of a Java servlet container?",
+        "question": "Which of the following is a common format for data exchange in RESTful services?",
         "answers": [
-          "To manage client-side Java programs.",
-          "To compile JSP files into servlets.",
-          "To manage the lifecycle of servlets and handle requests from clients.",
-          "To execute SQL queries for servlets."
-        ],
-        "correct": [2]
-      },
-      {
-        "question": "Which file extension is typically used for JavaServer Pages (JSP) files?",
-        "answers": [
-          ".jspf",
-          ".js",
-          ".jsp",
-          ".java"
-        ],
-        "correct": [2]
-      },
-      {
-        "question": "What is a session in the context of Java servlets?",
-        "answers": [
-          "A method in a Java class.",
-          "An object that persists across multiple client requests.",
-          "A container for servlet classes.",
-          "A built-in Java package for handling HTTP requests."
-        ],
-        "correct": [1]
-      },
-      {
-        "question": "Which of the following is NOT a phase in the lifecycle of a servlet?",
-        "answers": [
-          "Initialization",
-          "Service",
-          "Destruction",
-          "Validation"
+          "HTML",
+          "XML",
+          "JSON",
+          "Both XML and JSON"
         ],
         "correct": [3]
       },
       {
-        "question": "What is the purpose of the <jsp:include> action in JSP?",
+        "question": "What HTTP status code is typically returned for a successful GET request?",
         "answers": [
-          "To include a Java class in a JSP file.",
-          "To include another JSP file in the current JSP file.",
-          "To include a CSS file in a JSP file.",
-          "To include a JavaScript file in a JSP file."
+          "200 OK",
+          "201 Created",
+          "204 No Content",
+          "404 Not Found"
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "Which HTTP method is idempotent in a RESTful service?",
+        "answers": [
+          "POST",
+          "GET",
+          "DELETE",
+          "PUT"
+        ],
+        "correct": [1, 3]
+      },
+      {
+        "question": "What is a RESTful API?",
+        "answers": [
+          "An API that uses SOAP for communication.",
+          "An API that conforms to the constraints of REST architecture.",
+          "An API that uses remote procedure calls (RPC).",
+          "An API that requires stateful sessions."
         ],
         "correct": [1]
       },
       {
-        "question": "Which of the following is true about servlet thread safety?",
+        "question": "What is HATEOAS in the context of REST?",
         "answers": [
-          "Servlets are inherently thread-safe.",
-          "Servlets are inherently not thread-safe.",
-          "Servlets may or may not be thread-safe depending on implementation.",
-          "Servlets cannot be accessed concurrently."
+          "Hypermedia as the Engine of Application State",
+          "Hypertext Application Transfer Extension",
+          "HTML Application Transfer Extension",
+          "Hypermedia Application Transfer Encoding"
         ],
-        "correct": [2]
-      },
-      {
-        "question": "What is the purpose of the web.xml file in a Java web application?",
-        "answers": [
-          "To store session data.",
-          "To define servlet mappings and configurations.",
-          "To define HTML layout templates.",
-          "To store user authentication credentials."
-        ],
-        "correct": [1]
-      },
-      {
-        "question": "Which of the following is true about JSP directives?",
-        "answers": [
-          "They are used to define variables within JSP files.",
-          "They are used to import Java classes into JSP files.",
-          "They are used to declare custom tag libraries.",
-          "They are used to define CSS styles in JSP files."
-        ],
-        "correct": [1]
-      },
-      {
-        "question": "What is the purpose of the forward() method in a servlet?",
-        "answers": [
-          "To redirect the client to another URL.",
-          "To forward the request and response objects to another servlet or JSP.",
-          "To include another servlet or JSP in the current servlet.",
-          "To send data from the server to the client."
-        ],
-        "correct": [1]
+        "correct": [0]
       }
     ]
   }

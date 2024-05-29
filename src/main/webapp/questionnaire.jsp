@@ -173,12 +173,16 @@
             const answersContainer = document.getElementById('answers');
             answersContainer.innerHTML = '';
 
+            // Determine input type based on the number of correct answers
+            const inputType = question.correct.length === 1 ? 'radio' : 'checkbox';
+            const inputName = inputType === 'radio' ? 'answer' : '';
+
             question.answers.forEach((answer, index) => {
                 const answerElement = document.createElement('div');
                 answerElement.classList.add('form-check');
                 const safe = escapeHtml(answer);
                 answerElement.innerHTML = `
-                    <input class="form-check-input" type="checkbox" value="\${index}" id="answer\${index}">
+                    <input class="form-check-input" type="\${inputType}"  name="\${inputName}" value="\${index}" id="answer\${index}">
                     <label class="form-check-label" for="answer\${index}" id="labelanswer\${index}"></label>
                 `;
                 answersContainer.appendChild(answerElement);
@@ -209,13 +213,21 @@
         function saveAnswer() {
             const question = questionnaire.questions[currentQuestionIndex];
             const selectedAnswers = [];
-            question.answers.forEach((_, index) => {
-                const answerElement = document.getElementById(`answer\${index}`);
-                if (answerElement.checked) {
-                    selectedAnswers.push(index);
+            if (question.correct.length === 1) {
+                // Handle radio button case
+                const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+                if (selectedAnswer) {
+                    selectedAnswers.push(parseInt(selectedAnswer.value));
                 }
-            });
-
+            } else {
+                // Handle checkbox case
+                question.answers.forEach((_, index) => {
+                    const answerElement = document.getElementById(`answer\${index}`);
+                    if (answerElement.checked) {
+                        selectedAnswers.push(index);
+                    }
+                });
+            }
             const studentAnswerData = {
                 question: question.question,
                 selectedAnswers: selectedAnswers,

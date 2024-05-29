@@ -1,0 +1,107 @@
+{
+    "id": "17",
+    "description": "Java Virtual Threads",
+    "questions": [
+      {
+        "question": "What are Java Virtual Threads designed to improve?",
+        "answers": [
+          "CPU performance",
+          "Memory management",
+          "Concurrency and scalability",
+          "Syntax readability"
+        ],
+        "correct": [2]
+      },
+      {
+        "question": "How do virtual threads differ from traditional threads in Java?",
+        "answers": [
+          "Virtual threads are managed by the JVM.",
+          "Virtual threads have lower overhead than traditional threads.",
+          "Virtual threads cannot be used for I/O operations.",
+          "Virtual threads are managed by the operating system."
+        ],
+        "correct": [0, 1]
+      },
+      {
+        "question": "Which JDK version introduced virtual threads as a preview feature?",
+        "answers": [
+          "JDK 11",
+          "JDK 15",
+          "JDK 17",
+          "JDK 19"
+        ],
+        "correct": [3]
+      },
+      {
+        "question": "What is a primary benefit of using virtual threads?",
+        "answers": [
+          "Improved security features",
+          "Simplified thread management",
+          "Enhanced user interface components",
+          "Better compatibility with legacy systems"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "What is the typical use case for virtual threads?",
+        "answers": [
+          "Real-time graphics rendering",
+          "Data encryption",
+          "High-concurrency applications",
+          "File system operations"
+        ],
+        "correct": [2]
+      },
+      {
+        "question": "What is the impact of virtual threads on blocking I/O operations?",
+        "answers": [
+          "They make blocking I/O operations non-blocking.",
+          "They reduce the resource cost of blocking I/O operations.",
+          "They increase the resource cost of blocking I/O operations.",
+          "They do not affect blocking I/O operations."
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "How do virtual threads affect the scalability of applications?",
+        "answers": [
+          "They limit the number of concurrent threads.",
+          "They allow for millions of concurrent threads.",
+          "They reduce the performance of concurrent applications.",
+          "They simplify the scalability of monolithic applications."
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "Which project within the OpenJDK aims to bring virtual threads to Java?",
+        "answers": [
+          "Project Valhalla",
+          "Project Loom",
+          "Project Panama",
+          "Project Amber"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "What is a potential downside of using virtual threads?",
+        "answers": [
+          "Increased complexity in debugging",
+          "Higher memory usage",
+          "Incompatibility with existing libraries",
+          "Limited to specific operating systems"
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "What programming model do virtual threads in Java facilitate?",
+        "answers": [
+          "Reactive programming",
+          "Functional programming",
+          "Object-oriented programming",
+          "Structured concurrency"
+        ],
+        "correct": [3]
+      }
+    ]
+  }
+  
