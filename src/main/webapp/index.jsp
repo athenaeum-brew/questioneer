@@ -43,10 +43,20 @@
 
                     <c:set var="_id_" value="${questionnaire.id()}" />
                     <c:set var="_title_" value="${questionnaire.title()}" />
+                    <c:set var="_slides_" value="${questionnaire.slides()}" />
 
                     <tr id="tr${_id_}">
                         <td>${_title_}</td>
-                        <td><a href="https://athenaeum.cthiebaud.com/slides/?${_id_}.md">Slides ${_id_}</a></td>
+                        <td>
+                            <c:choose>
+                                <c:when test="${empty _slides_}">
+                                    &nbsp;
+                                </c:when>
+                                <c:otherwise>
+                                    <a href="${_slides_}">Slides ${_id_}</a>
+                                </c:otherwise>
+                            </c:choose>
+                        </td>
                         <td><a href="q/${_id_}">Quizz ${_id_}</a></td>
                     </tr>
                 </c:forEach>
