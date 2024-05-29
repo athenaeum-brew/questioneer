@@ -33,8 +33,8 @@
         <table class="table table-striped">
             <thead>
                 <tr>
+                    <th scope="col" class="">Title</th>
                     <th scope="col" class="">Slides</th>
-                    <th scope="col" class="">Description</th>
                     <th scope="col" class=""><span>Quizz</span><span style="font-size:24px; color: gray; margin-left: .5rem;">↯</span></th>
                 </tr>
             </thead>

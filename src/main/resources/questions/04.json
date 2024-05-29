@@ -1,106 +1,156 @@
 {
-    "id": "04",
-    "description": "Basic Command-Line Interface",
+    "id": "20",
+    "description": "Java Object-Oriented Programming",
     "questions": [
       {
-        "question": "Which method is used to print text to the console in Java?",
+        "question": "What is Object-Oriented Programming (OOP)?",
         "answers": [
-          "System.out.write()",
-          "System.print()",
-          "System.out.println()",
-          "System.console().print()"
-        ],
-        "correct": [2]
-      },
-      {
-        "question": "How can you read a line of input from the user in a Java program?",
-        "answers": [
-          "System.in.read()",
-          "Scanner.nextLine()",
-          "BufferedReader.readLine()",
-          "System.console().readLine()"
-        ],
-        "correct": [1, 2, 3]
-      },
-      {
-        "question": "What import statement is necessary to use the Scanner class for user input?",
-        "answers": [
-          "import java.io.Scanner;",
-          "import java.util.Scanner;",
-          "import java.lang.Scanner;",
-          "import java.input.Scanner;"
+          "A procedural programming paradigm",
+          "A programming paradigm organized around objects that encapsulate data and behavior",
+          "A functional programming paradigm",
+          "A type of low-level programming"
         ],
         "correct": [1]
       },
       {
-        "question": "How do you format a string to include variables in Java?",
+        "question": "Which of the following is NOT a principle of OOP?",
         "answers": [
-          "String.format()",
-          "System.out.printf()",
-          "System.out.format()",
-          "All of the above"
+          "Encapsulation",
+          "Abstraction",
+          "Inheritance",
+          "Compilation"
         ],
         "correct": [3]
       },
       {
-        "question": "Which method of the Scanner class reads an integer from the user input?",
+        "question": "Which principle of OOP refers to bundling data and methods within a single unit or class?",
         "answers": [
-          "nextInt()",
-          "readInt()",
-          "getInt()",
-          "fetchInt()"
+          "Polymorphism",
+          "Inheritance",
+          "Encapsulation",
+          "Abstraction"
+        ],
+        "correct": [2]
+      },
+      {
+        "question": "What is a potential cost associated with using OOP?",
+        "answers": [
+          "Simpler design process",
+          "Improved performance",
+          "Increased complexity",
+          "Easier learning curve"
+        ],
+        "correct": [2]
+      },
+      {
+        "question": "What does the `abstract` keyword signify when used in a class declaration?",
+        "answers": [
+          "The class can be instantiated",
+          "The class cannot be extended",
+          "The class cannot be instantiated and may contain abstract methods",
+          "The class can only contain concrete methods"
+        ],
+        "correct": [2]
+      },
+      {
+        "question": "In OOP, what is inheritance?",
+        "answers": [
+          "A way to duplicate code",
+          "A mechanism where a subclass inherits attributes and methods from a superclass",
+          "A principle to hide data",
+          "A type of data encapsulation"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "Which Java keyword is used to create a subclass?",
+        "answers": [
+          "extends",
+          "implements",
+          "inherits",
+          "subclass"
         ],
         "correct": [0]
       },
       {
-        "question": "How can you pass command-line arguments to a Java program?",
+        "question": "What is polymorphism in OOP?",
         "answers": [
-          "Using the args parameter in the main method",
-          "Using the getArguments() method",
-          "Using the System.console() method",
-          "Using the InputStream method"
+          "The ability of different classes to be treated as instances of the same class through a common interface",
+          "The hiding of implementation details",
+          "The sharing of methods among different classes",
+          "The creation of new classes from existing ones"
         ],
         "correct": [0]
       },
       {
-        "question": "What is the correct way to retrieve the second command-line argument in a Java program?",
+        "question": "Which statement about interfaces in Java is true?",
         "answers": [
-          "args[1]",
-          "args[2]",
-          "args[0]",
-          "args.get(1)"
+          "Interfaces can have concrete methods",
+          "A class can implement multiple interfaces",
+          "Interfaces can be instantiated",
+          "Interfaces are used to create subclasses"
         ],
-        "correct": [0]
+        "correct": [1]
       },
       {
-        "question": "Which of the following statements correctly declares a Scanner object to read from the standard input?",
+        "question": "What is the purpose of the `@Override` annotation in Java?",
         "answers": [
-          "Scanner scanner = new Scanner(System.in);",
-          "Scanner scanner = new Scanner(System.out);",
-          "Scanner scanner = new Scanner(System.input);",
-          "Scanner scanner = new Scanner(System.console());"
+          "To indicate that a method is abstract",
+          "To catch errors at compile time if a method doesn't actually override a superclass method",
+          "To declare a new method",
+          "To hide a method"
         ],
-        "correct": [0]
+        "correct": [1]
       },
       {
-        "question": "How do you check if there is another line of input available in a Scanner object?",
+        "question": "What is the main benefit of using composition over inheritance in OOP?",
         "answers": [
-          "scanner.hasNextLine()",
-          "scanner.nextLine()",
-          "scanner.checkNextLine()",
-          "scanner.availableNextLine()"
+          "It creates deeper class hierarchies",
+          "It promotes code reuse and flexibility by combining simpler objects",
+          "It is easier to understand",
+          "It eliminates the need for interfaces"
         ],
-        "correct": [0]
+        "correct": [1]
       },
       {
-        "question": "Which of the following methods from the Console class reads a password from the user input without echoing the characters?",
+        "question": "Which of the following is true about multiple inheritance in Java?",
         "answers": [
-          "console.readPassword()",
-          "console.getPassword()",
-          "console.readPasswordLine()",
-          "console.readLinePassword()"
+          "Java supports multiple inheritance with classes",
+          "Java supports multiple inheritance only with interfaces",
+          "Java does not support multiple inheritance at all",
+          "Multiple inheritance can be achieved through abstract classes"
         ],
-        "correct": [0]
+        "correct": [1]
+      },
+      {
+        "question": "What is an enum in Java?",
+        "answers": [
+          "A class that allows multiple inheritance",
+          "A special data type that enables for a variable to be a set of predefined constants",
+          "A type of interface",
+          "A method for creating instances"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "What is UML commonly used for in OOP?",
+        "answers": [
+          "Writing code",
+          "Designing and visualizing the structure and behavior of software systems",
+          "Debugging programs",
+          "Running applications"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "Which of the following is NOT a tool used in OOP?",
+        "answers": [
+          "Classes",
+          "Abstract Classes",
+          "Constructors",
+          "Garbage Collectors"
+        ],
+        "correct": [3]
       }
     ]
   }

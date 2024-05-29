@@ -1,0 +1,107 @@
+{
+    "id": "02",
+    "description": "Basic Command-Line Interface",
+    "questions": [
+      {
+        "question": "Which method is used to print text to the console in Java?",
+        "answers": [
+          "System.out.write()",
+          "System.print()",
+          "System.out.println()",
+          "System.console().print()"
+        ],
+        "correct": [2]
+      },
+      {
+        "question": "How can you read a line of input from the user in a Java program?",
+        "answers": [
+          "System.in.read()",
+          "Scanner.nextLine()",
+          "BufferedReader.readLine()",
+          "System.console().readLine()"
+        ],
+        "correct": [1, 2, 3]
+      },
+      {
+        "question": "What import statement is necessary to use the Scanner class for user input?",
+        "answers": [
+          "import java.io.Scanner;",
+          "import java.util.Scanner;",
+          "import java.lang.Scanner;",
+          "import java.input.Scanner;"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "How do you format a string to include variables in Java?",
+        "answers": [
+          "String.format()",
+          "System.out.printf()",
+          "System.out.format()",
+          "All of the above"
+        ],
+        "correct": [3]
+      },
+      {
+        "question": "Which method of the Scanner class reads an integer from the user input?",
+        "answers": [
+          "nextInt()",
+          "readInt()",
+          "getInt()",
+          "fetchInt()"
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "How can you pass command-line arguments to a Java program?",
+        "answers": [
+          "Using the args parameter in the main method",
+          "Using the getArguments() method",
+          "Using the System.console() method",
+          "Using the InputStream method"
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "What is the correct way to retrieve the second command-line argument in a Java program?",
+        "answers": [
+          "args[1]",
+          "args[2]",
+          "args[0]",
+          "args.get(1)"
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "Which of the following statements correctly declares a Scanner object to read from the standard input?",
+        "answers": [
+          "Scanner scanner = new Scanner(System.in);",
+          "Scanner scanner = new Scanner(System.out);",
+          "Scanner scanner = new Scanner(System.input);",
+          "Scanner scanner = new Scanner(System.console());"
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "How do you check if there is another line of input available in a Scanner object?",
+        "answers": [
+          "scanner.hasNextLine()",
+          "scanner.nextLine()",
+          "scanner.checkNextLine()",
+          "scanner.availableNextLine()"
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "Which of the following methods from the Console class reads a password from the user input without echoing the characters?",
+        "answers": [
+          "console.readPassword()",
+          "console.getPassword()",
+          "console.readPasswordLine()",
+          "console.readLinePassword()"
+        ],
+        "correct": [0]
+      }
+    ]
+  }
+  
