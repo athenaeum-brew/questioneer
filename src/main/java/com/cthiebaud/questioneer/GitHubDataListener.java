@@ -6,9 +6,13 @@ import jakarta.servlet.ServletContextListener;
 import jakarta.servlet.annotation.WebListener;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
@@ -21,7 +25,7 @@ import org.json.simple.parser.ParseException;
 @WebListener
 public class GitHubDataListener implements ServletContextListener {
     private static final String GITHUB_API_URL = "https://api.github.com/orgs/athenaeum-brew/repos";
-    private static final String CONFIG_FILE_PATH = "/WEB-INF/config/_config.properties";
+    private static final String CONFIG_FILE_PATH = "/WEB-INF/config/config.properties";
     private static String ACCESS_TOKEN;
 
     @Override
@@ -35,22 +39,31 @@ public class GitHubDataListener implements ServletContextListener {
 
             for (String repo : repos) {
                 List<String> javaFiles = getJavaFiles(repo);
-                data.put(repo, javaFiles);
+                if (javaFiles.size() > 0) {
+                    data.put(repo, javaFiles);
+                }
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        sce.getServletContext().setAttribute("githubData", data);
+
+        // Make the map immutable
+        Map<String, List<String>> immutableData = Collections.unmodifiableMap(data);
+
+        sce.getServletContext().setAttribute("githubData", immutableData);
     }
 
     @Override
     public void contextDestroyed(ServletContextEvent sce) {
         // Cleanup if needed
+        sce.getServletContext().removeAttribute("githubData");
     }
 
-    private List<String> getRepos() throws IOException, ParseException {
-        String jsonResponse = getHttpResponse(GITHUB_API_URL, ACCESS_TOKEN);
-        JSONArray jsonArray = parseJsonResponse(jsonResponse);
+    private List<String> getRepos() {
+        JSONArray jsonArray = getJsonResponse(GITHUB_API_URL, ACCESS_TOKEN);
+        if (jsonArray == null) {
+            return Collections.emptyList();
+        }
         List<String> repos = new ArrayList<>();
 
         for (Object obj : jsonArray) {
@@ -67,8 +80,10 @@ public class GitHubDataListener implements ServletContextListener {
 
     private List<String> findJavaFiles(String repo, String directory) throws IOException, ParseException {
         String contentsUrl = "https://api.github.com/repos/athenaeum-brew/" + repo + "/contents/" + directory;
-        String jsonResponse = getHttpResponse(contentsUrl, ACCESS_TOKEN);
-        JSONArray jsonArray = parseJsonResponse(jsonResponse);
+        JSONArray jsonArray = getJsonResponse(contentsUrl, ACCESS_TOKEN);
+        if (jsonArray == null) {
+            return Collections.emptyList();
+        }
         List<String> javaFiles = new ArrayList<>();
 
         for (Object obj : jsonArray) {
@@ -93,42 +108,33 @@ public class GitHubDataListener implements ServletContextListener {
         return javaFiles;
     }
 
-    private String getHttpResponse(String urlString, String accessToken) throws IOException {
-        URL url = new URL(urlString);
-        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-
-        // Set request properties
-        connection.setRequestMethod("GET");
-        connection.setRequestProperty("Accept", "application/json");
-        connection.setRequestProperty("Authorization", "token " + accessToken);
-
+    public JSONArray getJsonResponse(String urlString, String accessToken) {
         try {
-            // Get response code
-            int responseCode = connection.getResponseCode();
+            URI uri = new URI(urlString.replaceAll(" ", "%20"));
+            HttpClient client = HttpClient.newHttpClient();
 
-            if (responseCode == HttpURLConnection.HTTP_OK) {
-                // Read response
-                StringBuilder response = new StringBuilder();
-                int read;
-                while ((read = connection.getInputStream().read()) != -1) {
-                    response.append((char) read);
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(uri)
+                    .header("Accept", "application/json")
+                    .header("Authorization", "token " + accessToken)
+                    .GET()
+                    .build();
+
+            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+            if (response.statusCode() == 200) {
+                try {
+                    return (JSONArray) new JSONParser().parse(response.body());
+                } catch (ParseException e) {
+                    e.printStackTrace(); // Log the error if needed
+                    return null; // Return null in case of parsing error
                 }
-                return response.toString();
             } else {
-                // If not OK, return empty string
-                return "";
+                return null; // Return null if the response status is not 200
             }
-        } finally {
-            connection.disconnect();
-        }
-    }
-
-    private JSONArray parseJsonResponse(String jsonResponse) {
-        try {
-            return (JSONArray) new JSONParser().parse(jsonResponse);
-        } catch (ParseException e) {
-            e.printStackTrace(); // Log the error if needed
-            return new JSONArray(); // Return an empty array in case of parsing error
+        } catch (IOException | URISyntaxException | InterruptedException e) {
+            e.printStackTrace(); // Log any exception
+            return null; // Return null in case of any exception
         }
     }
 
