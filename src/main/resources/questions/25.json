@@ -1,0 +1,107 @@
+{
+    "id": "25",
+    "description": "REST (Representational State Transfer)",
+    "questions": [
+      {
+        "question": "What does REST stand for?",
+        "answers": [
+          "Remote Execution and State Transfer",
+          "Representational State Transfer",
+          "Resource Execution State Transfer",
+          "Reliable Event State Transfer"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "Which HTTP method is typically used to create a new resource in a RESTful service?",
+        "answers": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "What is a key characteristic of RESTful services?",
+        "answers": [
+          "They use SOAP for message formatting.",
+          "They maintain session state on the server.",
+          "They are stateless.",
+          "They require XML for data exchange."
+        ],
+        "correct": [2]
+      },
+      {
+        "question": "Which HTTP method is used to retrieve data from a RESTful service?",
+        "answers": [
+          "POST",
+          "GET",
+          "PUT",
+          "DELETE"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "In REST, what does it mean for a service to be stateless?",
+        "answers": [
+          "The service does not store client context between requests.",
+          "The service can handle multiple states of a resource.",
+          "The service uses a state machine for request processing.",
+          "The service stores state information on the client side."
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "Which of the following is a common format for data exchange in RESTful services?",
+        "answers": [
+          "HTML",
+          "XML",
+          "JSON",
+          "Both XML and JSON"
+        ],
+        "correct": [3]
+      },
+      {
+        "question": "What HTTP status code is typically returned for a successful GET request?",
+        "answers": [
+          "200 OK",
+          "201 Created",
+          "204 No Content",
+          "404 Not Found"
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "Which HTTP method is idempotent in a RESTful service?",
+        "answers": [
+          "POST",
+          "GET",
+          "DELETE",
+          "PUT"
+        ],
+        "correct": [1, 3]
+      },
+      {
+        "question": "What is a RESTful API?",
+        "answers": [
+          "An API that uses SOAP for communication.",
+          "An API that conforms to the constraints of REST architecture.",
+          "An API that uses remote procedure calls (RPC).",
+          "An API that requires stateful sessions."
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "What is HATEOAS in the context of REST?",
+        "answers": [
+          "Hypermedia as the Engine of Application State",
+          "Hypertext Application Transfer Extension",
+          "HTML Application Transfer Extension",
+          "Hypermedia Application Transfer Encoding"
+        ],
+        "correct": [0]
+      }
+    ]
+  }
+  

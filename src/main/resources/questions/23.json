@@ -1,5 +1,107 @@
 {
-  "id": "23",
-  "description": "Introduction to Advanced GUI",
-  "questions": []
-}
+    "id": "23",
+    "description": "Java Servlet/JSP Programming Quiz",
+    "questions": [
+      {
+        "question": "Which of the following best describes a Java servlet?",
+        "answers": [
+          "A server-side Java program that dynamically processes requests and generates dynamic web pages.",
+          "A client-side Java program that runs in a web browser.",
+          "A Java program that handles database operations on the server-side.",
+          "A Java program that compiles HTML files into executable code."
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "What is the main function of a Java servlet container?",
+        "answers": [
+          "To manage client-side Java programs.",
+          "To compile JSP files into servlets.",
+          "To manage the lifecycle of servlets and handle requests from clients.",
+          "To execute SQL queries for servlets."
+        ],
+        "correct": [2]
+      },
+      {
+        "question": "Which file extension is typically used for JavaServer Pages (JSP) files?",
+        "answers": [
+          ".jspf",
+          ".js",
+          ".jsp",
+          ".java"
+        ],
+        "correct": [2]
+      },
+      {
+        "question": "What is a session in the context of Java servlets?",
+        "answers": [
+          "A method in a Java class.",
+          "An object that persists across multiple client requests.",
+          "A container for servlet classes.",
+          "A built-in Java package for handling HTTP requests."
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "Which of the following is NOT a phase in the lifecycle of a servlet?",
+        "answers": [
+          "Initialization",
+          "Service",
+          "Destruction",
+          "Validation"
+        ],
+        "correct": [3]
+      },
+      {
+        "question": "What is the purpose of the <jsp:include> action in JSP?",
+        "answers": [
+          "To include a Java class in a JSP file.",
+          "To include another JSP file in the current JSP file.",
+          "To include a CSS file in a JSP file.",
+          "To include a JavaScript file in a JSP file."
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "Which of the following is true about servlet thread safety?",
+        "answers": [
+          "Servlets are inherently thread-safe.",
+          "Servlets are inherently not thread-safe.",
+          "Servlets may or may not be thread-safe depending on implementation.",
+          "Servlets cannot be accessed concurrently."
+        ],
+        "correct": [2]
+      },
+      {
+        "question": "What is the purpose of the web.xml file in a Java web application?",
+        "answers": [
+          "To store session data.",
+          "To define servlet mappings and configurations.",
+          "To define HTML layout templates.",
+          "To store user authentication credentials."
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "Which of the following is true about JSP directives?",
+        "answers": [
+          "They are used to define variables within JSP files.",
+          "They are used to import Java classes into JSP files.",
+          "They are used to declare custom tag libraries.",
+          "They are used to define CSS styles in JSP files."
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "What is the purpose of the forward() method in a servlet?",
+        "answers": [
+          "To redirect the client to another URL.",
+          "To forward the request and response objects to another servlet or JSP.",
+          "To include another servlet or JSP in the current servlet.",
+          "To send data from the server to the client."
+        ],
+        "correct": [1]
+      }
+    ]
+  }
+  

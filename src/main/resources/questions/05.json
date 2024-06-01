@@ -1,0 +1,157 @@
+{
+    "id": "o5",
+    "description": "Java Exception Handling",
+    "questions": [
+      {
+        "question": "What is an exception in Java?",
+        "answers": [
+          "A syntax error in the code",
+          "A signal that indicates a condition that a program should handle",
+          "An optional feature for debugging",
+          "A mechanism to optimize performance"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "Which of the following is NOT a type of exception in Java?",
+        "answers": [
+          "Checked Exception",
+          "Unchecked Exception",
+          "Compile-time Exception",
+          "Error"
+        ],
+        "correct": [2]
+      },
+      {
+        "question": "Which keyword is used to handle exceptions in Java?",
+        "answers": [
+          "handle",
+          "catch",
+          "try",
+          "throw"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "What is the purpose of the 'finally' block?",
+        "answers": [
+          "To specify a block of code to be executed when an exception occurs",
+          "To declare an exception",
+          "To specify a block of code that will be executed regardless of whether an exception occurs or not",
+          "To terminate a program"
+        ],
+        "correct": [2]
+      },
+      {
+        "question": "Which keyword is used to manually throw an exception?",
+        "answers": [
+          "catch",
+          "finally",
+          "throws",
+          "throw"
+        ],
+        "correct": [3]
+      },
+      {
+        "question": "What is a checked exception?",
+        "answers": [
+          "An exception that is checked at runtime",
+          "An exception that is checked at compile-time",
+          "An exception that cannot be caught",
+          "An exception that only occurs during specific conditions"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "Which of the following is a checked exception?",
+        "answers": [
+          "ArrayIndexOutOfBoundsException",
+          "NullPointerException",
+          "IOException",
+          "ArithmeticException"
+        ],
+        "correct": [2]
+      },
+      {
+        "question": "Which of the following is an unchecked exception?",
+        "answers": [
+          "IOException",
+          "FileNotFoundException",
+          "ClassNotFoundException",
+          "ArithmeticException"
+        ],
+        "correct": [3]
+      },
+      {
+        "question": "How can you create a custom exception in Java?",
+        "answers": [
+          "By extending the Exception class",
+          "By implementing the Throwable interface",
+          "By extending the RuntimeException class",
+          "By both extending the Exception class or the RuntimeException class"
+        ],
+        "correct": [3]
+      },
+      {
+        "question": "What does the 'throws' keyword indicate?",
+        "answers": [
+          "That an exception will be caught",
+          "That an exception will be handled within the method",
+          "That a method might throw an exception and it must be handled by the caller",
+          "That a method will always throw an exception"
+        ],
+        "correct": [2]
+      },
+      {
+        "question": "Which of the following statements about the 'try-catch' block is true?",
+        "answers": [
+          "The 'try' block must be followed by at least one 'catch' block",
+          "The 'try' block can be followed by either 'catch' or 'finally' or both",
+          "The 'catch' block must always be followed by a 'finally' block",
+          "There can be multiple 'try' blocks in a single 'catch' block"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "Which exception is thrown when a method is called on a null object?",
+        "answers": [
+          "IOException",
+          "NullPointerException",
+          "ArithmeticException",
+          "IndexOutOfBoundsException"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "How do you catch multiple exceptions in a single catch block in Java?",
+        "answers": [
+          "Using multiple catch blocks",
+          "Using nested try-catch blocks",
+          "Using the multi-catch block with the '|' operator",
+          "Using the 'catch' keyword multiple times"
+        ],
+        "correct": [2]
+      },
+      {
+        "question": "What is the parent class of all exceptions in Java?",
+        "answers": [
+          "Object",
+          "Throwable",
+          "Exception",
+          "RuntimeException"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "Which block of code will always execute regardless of whether an exception is thrown or not?",
+        "answers": [
+          "try",
+          "catch",
+          "finally",
+          "throw"
+        ],
+        "correct": [2]
+      }
+    ]
+  }
+  

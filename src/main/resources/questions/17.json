@@ -1,106 +1,106 @@
 {
     "id": "17",
-    "description": "Concurrency in Java",
+    "description": "Java Virtual Threads",
     "questions": [
       {
-        "question": "What is the purpose of the `synchronized` keyword in Java?",
+        "question": "What are Java Virtual Threads designed to improve?",
         "answers": [
-          "To improve the performance of a program.",
-          "To ensure that a method can only be accessed by one thread at a time.",
-          "To make a method static.",
-          "To create a new thread."
-        ],
-        "correct": [1]
-      },
-      {
-        "question": "Which class should you use if you need a thread-safe, bounded buffer in Java?",
-        "answers": [
-          "ArrayList",
-          "LinkedList",
-          "ArrayBlockingQueue",
-          "HashMap"
+          "CPU performance",
+          "Memory management",
+          "Concurrency and scalability",
+          "Syntax readability"
         ],
         "correct": [2]
       },
       {
-        "question": "What does the `volatile` keyword ensure when applied to a variable?",
+        "question": "How do virtual threads differ from traditional threads in Java?",
         "answers": [
-          "The variable is immutable.",
-          "The variable is thread-safe.",
-          "Changes to the variable are always visible to all threads.",
-          "The variable is shared between classes."
+          "Virtual threads are managed by the JVM.",
+          "Virtual threads have lower overhead than traditional threads.",
+          "Virtual threads cannot be used for I/O operations.",
+          "Virtual threads are managed by the operating system."
         ],
-        "correct": [2]
+        "correct": [0, 1]
       },
       {
-        "question": "Which method can be used to make a thread wait for another thread to finish its execution?",
+        "question": "Which JDK version introduced virtual threads as a preview feature?",
         "answers": [
-          "Thread.sleep()",
-          "Thread.join()",
-          "Thread.wait()",
-          "Thread.notify()"
-        ],
-        "correct": [1]
-      },
-      {
-        "question": "Which interface must be implemented by a class whose instances are intended to be executed by a thread?",
-        "answers": [
-          "Runnable",
-          "Callable",
-          "Thread",
-          "Executor"
-        ],
-        "correct": [0]
-      },
-      {
-        "question": "Which of the following is a correct way to start a thread?",
-        "answers": [
-          "new Thread(new Runnable()).run();",
-          "new Thread(new Runnable()).start();",
-          "new Runnable().start();",
-          "Thread.start(new Runnable());"
-        ],
-        "correct": [1]
-      },
-      {
-        "question": "What is the result of calling `Future.get()` on a `Future` object?",
-        "answers": [
-          "The result of the computation when it is completed.",
-          "A new thread.",
-          "The current state of the thread.",
-          "An exception is always thrown."
-        ],
-        "correct": [0]
-      },
-      {
-        "question": "What does the `ReentrantLock` class provide that `synchronized` does not?",
-        "answers": [
-          "Fairness policy.",
-          "Thread safety.",
-          "Atomicity.",
-          "Performance improvement."
-        ],
-        "correct": [0]
-      },
-      {
-        "question": "Which of the following is not a benefit of using the `ExecutorService` framework?",
-        "answers": [
-          "Easy management of thread life cycles.",
-          "Simplified asynchronous task execution.",
-          "Improved readability and maintainability of code.",
-          "Automatic management of `synchronized` blocks."
+          "JDK 11",
+          "JDK 15",
+          "JDK 17",
+          "JDK 19"
         ],
         "correct": [3]
       },
       {
-        "question": "What happens if a thread calls `wait()` on an object?",
+        "question": "What is a primary benefit of using virtual threads?",
         "answers": [
-          "It immediately returns from the method.",
-          "It goes into a waiting state until another thread calls `notify()` or `notifyAll()` on the same object.",
-          "It is terminated.",
-          "It throws an `InterruptedException`."
+          "Improved security features",
+          "Simplified thread management",
+          "Enhanced user interface components",
+          "Better compatibility with legacy systems"
         ],
         "correct": [1]
+      },
+      {
+        "question": "What is the typical use case for virtual threads?",
+        "answers": [
+          "Real-time graphics rendering",
+          "Data encryption",
+          "High-concurrency applications",
+          "File system operations"
+        ],
+        "correct": [2]
+      },
+      {
+        "question": "What is the impact of virtual threads on blocking I/O operations?",
+        "answers": [
+          "They make blocking I/O operations non-blocking.",
+          "They reduce the resource cost of blocking I/O operations.",
+          "They increase the resource cost of blocking I/O operations.",
+          "They do not affect blocking I/O operations."
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "How do virtual threads affect the scalability of applications?",
+        "answers": [
+          "They limit the number of concurrent threads.",
+          "They allow for millions of concurrent threads.",
+          "They reduce the performance of concurrent applications.",
+          "They simplify the scalability of monolithic applications."
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "Which project within the OpenJDK aims to bring virtual threads to Java?",
+        "answers": [
+          "Project Valhalla",
+          "Project Loom",
+          "Project Panama",
+          "Project Amber"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "What is a potential downside of using virtual threads?",
+        "answers": [
+          "Increased complexity in debugging",
+          "Higher memory usage",
+          "Incompatibility with existing libraries",
+          "Limited to specific operating systems"
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "What programming model do virtual threads in Java facilitate?",
+        "answers": [
+          "Reactive programming",
+          "Functional programming",
+          "Object-oriented programming",
+          "Structured concurrency"
+        ],
+        "correct": [3]
       }
     ]
   }

@@ -1,0 +1,107 @@
+{
+    "id": "26",
+    "description": "Introduction to Vert.x",
+    "questions": [
+      {
+        "question": "What is Vert.x primarily used for?",
+        "answers": [
+          "Building reactive applications on the JVM.",
+          "Developing mobile applications.",
+          "Creating desktop applications.",
+          "Web scraping."
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "Who created Vert.x, and in which year?",
+        "answers": [
+          "Created by Tim Fox in 2011.",
+          "Developed by James Gosling in 2005.",
+          "Invented by Linus Torvalds in 1991.",
+          "Founded by Larry Page and Sergey Brin in 1998."
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "What is a core concept of Vert.x that enables communication between its components?",
+        "answers": [
+          "Event Bus.",
+          "Message Queue.",
+          "REST API.",
+          "Database."
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "Which of the following is a characteristic of Verticles in Vert.x?",
+        "answers": [
+          "They are similar to monolithic applications.",
+          "They can only be deployed at application startup.",
+          "They are the main building blocks of Vert.x applications.",
+          "They can only communicate with each other synchronously."
+        ],
+        "correct": [2]
+      },
+      {
+        "question": "What type of verticle runs on worker threads for blocking operations?",
+        "answers": [
+          "Worker Verticles.",
+          "Standard Verticles.",
+          "Async Verticles.",
+          "Event-driven Verticles."
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "What is the purpose of the Event Bus in Vert.x?",
+        "answers": [
+          "Communication between verticles.",
+          "File management.",
+          "Database querying.",
+          "User authentication."
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "Which programming paradigm does Vert.x emphasize for improved resource utilization and higher performance?",
+        "answers": [
+          "Reactive Programming.",
+          "Procedural Programming.",
+          "Object-Oriented Programming.",
+          "Functional Programming."
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "How does Vert.x differ from traditional frameworks in terms of scalability?",
+        "answers": [
+          "Vert.x is designed for high concurrency and scalability.",
+          "Traditional frameworks are designed for low concurrency.",
+          "Traditional frameworks offer more scalability options.",
+          "Vert.x uses blocking I/O for better scalability."
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "Which real-world use case is NOT mentioned for Vert.x?",
+        "answers": [
+          "Developing machine learning algorithms.",
+          "Building scalable and maintainable microservices architectures.",
+          "Handling numerous concurrent device connections in IoT.",
+          "Creating high-performance, real-time web applications."
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "What advantage does Vert.x offer over traditional frameworks in terms of flexibility?",
+        "answers": [
+          "Offers more flexibility in language choice and application design.",
+          "Requires the use of a specific programming language.",
+          "Only supports Java for development.",
+          "Has limited support for different application architectures."
+        ],
+        "correct": [0]
+      }
+    ]
+  }
+  

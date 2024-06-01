@@ -3,6 +3,10 @@ package com.cthiebaud.questioneer;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -36,7 +40,12 @@ public enum Questionnaires {
                         String fileName = path.getFileName().toString();
                         String id = fileName.substring(0, fileName.lastIndexOf('.'));
                         String title = parseTitleFromFile(path);
-                        return new QuestionnaireRecord(id, title, null);
+                        String check = String.format("https://athenaeum.cthiebaud.com/slides/%s.md", id);
+                        String slides = String.format("https://athenaeum.cthiebaud.com/slides/?%s.md", id);
+                        if (!checkURL(check)) {
+                            slides = null;
+                        }
+                        return new QuestionnaireRecord(id, title, slides);
                     })
                     .peek(System.out::println)
                     .collect(Collectors.toList());
@@ -64,4 +73,21 @@ public enum Questionnaires {
             return null; // Return null if there's an error
         }
     }
+
+    public static boolean checkURL(String urlString) {
+        try {
+            URI uri = new URI(urlString);
+            URL url = uri.toURL();
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("HEAD"); // Use HEAD to avoid fetching content
+            connection.setConnectTimeout(5000); // Set timeout to 5 seconds
+            connection.setReadTimeout(5000); // Set timeout to 5 seconds
+
+            int responseCode = connection.getResponseCode();
+            return responseCode == HttpURLConnection.HTTP_OK;
+        } catch (Exception e) {
+            return false;
+        }
+    }
 }
+

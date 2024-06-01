@@ -1,0 +1,87 @@
+{
+    "id": "13",
+    "description": "JavaFX WebView",
+    "questions": [
+      {
+        "question": "What is the primary function of JavaFX WebView?",
+        "answers": [
+          "To display 3D graphics",
+          "To render web content (HTML/CSS/JavaScript) within a JavaFX application",
+          "To manage database connections",
+          "To handle file input/output operations"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "Which of the following is NOT a capability of JavaFX WebView?",
+        "answers": [
+          "Displaying web content",
+          "Executing JavaScript code",
+          "Bidirectional communication between Java and JavaScript",
+          "Compiling Java code"
+        ],
+        "correct": [3]
+      },
+      {
+        "question": "How can content be loaded into JavaFX WebView? (Select all that apply)",
+        "answers": [
+          "From a variable",
+          "From a file in the classpath",
+          "From an external URL",
+          "Directly from a database"
+        ],
+        "correct": [0, 1, 2]
+      },
+      {
+        "question": "What is the purpose of the JavaFX WebEngine class?",
+        "answers": [
+          "To handle graphical transformations",
+          "To manage the WebView's rendering of web content and interactions with JavaScript",
+          "To create and manage database connections",
+          "To handle file system operations"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "What is the WebView node used for in JavaFX?",
+        "answers": [
+          "To display web content within a JavaFX application",
+          "To perform background tasks",
+          "To manage user input",
+          "To handle network communications"
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "Which library or engine is behind the JavaFX WebView's web rendering capabilities?",
+        "answers": [
+          "Swing",
+          "AWT",
+          "Webkit",
+          "SWT"
+        ],
+        "correct": [2]
+      },
+      {
+        "question": "Which URL provides an overview of JavaFX WebView?",
+        "answers": [
+          "https://openjfx.io/",
+          "https://blogs.oracle.com/java/post/javafx-webview-overview",
+          "https://docs.oracle.com/javase/8/javafx/",
+          "https://github.com/athenaeum-brew/javafx-examples"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "Which of the following is a valid way to customize WebView's appearance and behavior?",
+        "answers": [
+          "Using CSS and JavaScript",
+          "Using SQL queries",
+          "Modifying the Java runtime",
+          "Editing system properties"
+        ],
+        "correct": [0]
+      }
+    ]
+  }
+  

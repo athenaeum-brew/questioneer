@@ -1,0 +1,157 @@
+{
+    "id": "11",
+    "description": "Java Graphical User Interface",
+    "questions": [
+      {
+        "question": "What is a 'Rich Client Interface' in Java?",
+        "answers": [
+          "A GUI with minimal interactivity and basic functionality",
+          "A GUI that enhances user experience through interactivity, visual appeal, and advanced features",
+          "A command-line interface with enhanced text formatting",
+          "A server-side application interface"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "Which of the following is NOT a feature of a Rich Client Interface?",
+        "answers": [
+          "Visual Appeal",
+          "Interactivity",
+          "Command-line Interaction",
+          "Multimedia Integration"
+        ],
+        "correct": [2]
+      },
+      {
+        "question": "Which Java technology was the first to provide a GUI toolkit in 1996?",
+        "answers": [
+          "Swing",
+          "SWT",
+          "JavaFX",
+          "AWT"
+        ],
+        "correct": [3]
+      },
+      {
+        "question": "Which Java GUI toolkit, introduced in 1998, improved platform independence and UI design flexibility over AWT?",
+        "answers": [
+          "Swing",
+          "SWT",
+          "JavaFX",
+          "AWT"
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "What does SWT stand for, and what was its primary advantage?",
+        "answers": [
+          "Simple Widget Toolkit; platform independence",
+          "Standard Widget Toolkit; using native widgets for better performance",
+          "Standard Web Toolkit; web integration",
+          "Simple Window Toolkit; ease of use"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "When was JavaFX introduced, and what is its primary purpose?",
+        "answers": [
+          "2000; to replace AWT",
+          "2008; to address modern UI development needs with rich APIs",
+          "1996; as the first Java GUI toolkit",
+          "2011; for mobile application development"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "Which of the following is NOT a component of JavaFX?",
+        "answers": [
+          "FXML",
+          "WebView",
+          "Swing Interoperability",
+          "Servlets"
+        ],
+        "correct": [3]
+      },
+      {
+        "question": "In JavaFX, what is the purpose of the 'Stage' class?",
+        "answers": [
+          "To define the main application window",
+          "To create UI controls like buttons and text fields",
+          "To handle file input/output operations",
+          "To manage event handling"
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "Which method in a JavaFX application is used to set up the primary stage?",
+        "answers": [
+          "start()",
+          "init()",
+          "launch()",
+          "main()"
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "What is the function of the JavaFX 'Scene' class?",
+        "answers": [
+          "To manage application threads",
+          "To contain all content for a specific stage",
+          "To handle network communications",
+          "To manage database connections"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "Which layout pane in JavaFX arranges its children in a single vertical column or horizontal row?",
+        "answers": [
+          "BorderPane",
+          "GridPane",
+          "StackPane",
+          "VBox/HBox"
+        ],
+        "correct": [3]
+      },
+      {
+        "question": "What is FXML in JavaFX?",
+        "answers": [
+          "A scripting language for event handling",
+          "A declarative XML-based language for defining UI layouts",
+          "A language for defining database queries",
+          "A protocol for network communication"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "Which of the following features is NOT included in JavaFX?",
+        "answers": [
+          "2D and 3D graphics support",
+          "Built-in UI controls and CSS styling",
+          "Hi-DPI support",
+          "Integrated database management"
+        ],
+        "correct": [3]
+      },
+      {
+        "question": "Which component of JavaFX is used for rendering web content within an application?",
+        "answers": [
+          "WebView",
+          "HTMLPane",
+          "BrowserPane",
+          "ContentPane"
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "Which architecture is common to both JavaFX and Android development?",
+        "answers": [
+          "Client-Server Architecture",
+          "Layered Architecture",
+          "Model-View-Controller (MVC) Architecture",
+          "Peer-to-Peer Architecture"
+        ],
+        "correct": [2]
+      }
+    ]
+  }
+  
