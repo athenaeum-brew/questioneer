@@ -40,8 +40,10 @@ public enum Questionnaires {
                         String fileName = path.getFileName().toString();
                         String id = fileName.substring(0, fileName.lastIndexOf('.'));
                         String title = parseTitleFromFile(path);
-                        String check = String.format("https://athenaeum.cthiebaud.com/slides/%s.md", id);
-                        String slides = String.format("https://athenaeum.cthiebaud.com/slides/?%s.md", id);
+                        String check = String.format("https://athenaeum.cthiebaud.com/einfuehrung/%s.md",
+                                id);
+                        String slides = String.format("https://athenaeum.cthiebaud.com/slides/?../einfuehrung/%s.md",
+                                id);
                         if (!checkURL(check)) {
                             slides = null;
                         }
@@ -90,4 +92,3 @@ public enum Questionnaires {
         }
     }
 }
-
