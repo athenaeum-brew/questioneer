@@ -95,10 +95,10 @@
         <version>2.13.0</version>
         <configuration>
           <schemaVersion>v2</schemaVersion>
-          <resourceGroup>questioneer-1716142208629-rg</resourceGroup>
-          <appName>questioneer-1716142208629</appName>
-          <pricingTier>B1</pricingTier>
-          <region>germanywestcentral</region>
+          <resourceGroup>questioneer_group</resourceGroup>
+          <appName>questioneer</appName>
+          <pricingTier>F1</pricingTier>
+          <region>italynorth</region>
           <runtime>
             <os>Linux</os>
             <javaVersion>Java 21</javaVersion>

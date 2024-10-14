@@ -1,0 +1,201 @@
+{
+  "id": "00",
+  "description": "Digest",
+  "questions": [
+    {
+      "question": "What is the purpose of the 'finally' block?",
+      "answers": [
+        "To specify a block of code to be executed when an exception occurs",
+        "To declare an exception",
+        "To specify a block of code that will be executed regardless of whether an exception occurs or not",
+        "To terminate a program"
+      ],
+      "correct": [2]
+    },
+    {
+      "question": "What is the purpose of a Java interface?",
+      "answers": [
+        "To define a blueprint for classes to implement",
+        "To represent a concrete implementation of a class",
+        "To store data",
+        "To perform mathematical operations"
+      ],
+      "correct": [0]
+    },
+    {
+      "question": "Which principle of OOP refers to bundling data and methods within a single unit or class?",
+      "answers": [
+        "Polymorphism",
+        "Inheritance",
+        "Encapsulation",
+        "Abstraction"
+      ],
+      "correct": [2]
+    },
+    {
+      "question": "Why are generics important in Java programming?",
+      "answers": [
+        "They enforce type safety during compile time.",
+        "They enhance code reusability and flexibility.",
+        "They allow for runtime type checking.",
+        "They significantly boost performance at runtime."
+      ],
+      "correct": [0, 1]
+    },
+    {
+      "question": "Which of the following declarations are valid in Java?",
+      "answers": [
+        "List<?> list = new ArrayList<String>();",
+        "List<? extends Number> list = new ArrayList<Integer>();",
+        "List<String> list = new ArrayList<Integer>();",
+        "List<? super Integer> list = new ArrayList<Number>();"
+      ],
+      "correct": [0, 1, 3]
+    },
+    {
+      "question": "What are the limitations of Java generics?",
+      "answers": [
+        "Generics do not support primitive types.",
+        "You cannot create instances of a type parameter.",
+        "Generics provide runtime type information.",
+        "You cannot cast to a generic type."
+      ],
+      "correct": [0, 1, 3]
+    },
+    {
+      "question": "Which interface represents a mapping between keys and values?",
+      "answers": ["List", "Set", "Map", "Collection"],
+      "correct": [2]
+    },
+    {
+      "question": "What is a key characteristic of the Set interface?",
+      "answers": [
+        "It allows duplicate elements",
+        "It maintains the order of elements",
+        "It does not allow duplicate elements",
+        "It provides positional access to elements"
+      ],
+      "correct": [2]
+    },
+    {
+      "question": "What does the map() method do in Java Streams?",
+      "answers": [
+        "Filters elements based on a predicate",
+        "Transforms each element to another object",
+        "Collects elements into a collection",
+        "Sorts elements in natural order"
+      ],
+      "correct": [1]
+    },
+    {
+      "question": "What does the reduce() method do?",
+      "answers": [
+        "Collects elements into a collection",
+        "Performs a reduction on the elements of the stream using an associative accumulation function",
+        "Filters elements based on a predicate",
+        "Transforms each element to another object"
+      ],
+      "correct": [1]
+    },
+    {
+      "question": "What does parallel programming involve?",
+      "answers": [
+        "Dividing a problem into sub-problems and solving them sequentially",
+        "Dividing a problem into sub-problems, solving them simultaneously on multiple processors or cores, and then combining the results",
+        "Executing tasks that can start, run, and complete in the background without blocking the main thread of execution",
+        "Creating multiple threads within a single process to perform tasks concurrently"
+      ],
+      "correct": [1]
+    },
+    {
+      "question": "What does the volatile keyword ensure?",
+      "answers": [
+        "That a variable is not cached and is read from main memory.",
+        "That only one thread can modify the variable at a time.",
+        "Visibility of changes across threads.",
+        "Prevents compiler optimizations that might reorder instructions."
+      ],
+      "correct": [0, 2, 3]
+    },
+    {
+      "question": "What does the `ReentrantLock` class provide that `synchronized` does not?",
+      "answers": [
+        "Fairness policy.",
+        "Thread safety.",
+        "Atomicity.",
+        "Performance improvement."
+      ],
+      "correct": [0]
+    },
+    {
+      "question": "What does HTML provide in web development?",
+      "answers": [
+        "The structure and content of a webpage",
+        "The styling and layout of a webpage",
+        "The interactive functionality of a webpage",
+        "The server-side logic of a webpage"
+      ],
+      "correct": [0]
+    },
+    {
+      "question": "What is the role of CSS in web development?",
+      "answers": [
+        "To create interactive and dynamic functionality",
+        "To describe the presentation of a document",
+        "To handle server-side programming",
+        "To structure the content of a webpage"
+      ],
+      "correct": [1]
+    },
+    {
+      "question": "Which of the following best describes a Java servlet?",
+      "answers": [
+        "A server-side Java program that dynamically processes requests and generates dynamic web pages.",
+        "A client-side Java program that runs in a web browser.",
+        "A Java program that handles database operations on the server-side.",
+        "A Java program that compiles HTML files into executable code."
+      ],
+      "correct": [0]
+    },
+    {
+      "question": "Which of the following is true about servlet thread safety?",
+      "answers": [
+        "Servlets are inherently thread-safe.",
+        "Servlets are inherently not thread-safe.",
+        "Servlets may or may not be thread-safe depending on implementation.",
+        "Servlets cannot be accessed concurrently."
+      ],
+      "correct": [2]
+    },
+    {
+      "question": "What is the main function of a Java servlet container?",
+      "answers": [
+        "To manage client-side Java programs.",
+        "To compile JSP files into servlets.",
+        "To manage the lifecycle of servlets and handle requests from clients.",
+        "To execute SQL queries for servlets."
+      ],
+      "correct": [2]
+    },
+    {
+      "question": "What is a RESTful API?",
+      "answers": [
+        "An API that uses SOAP for communication.",
+        "An API that conforms to the constraints of REST architecture.",
+        "An API that uses remote procedure calls (RPC).",
+        "An API that requires stateful sessions."
+      ],
+      "correct": [1]
+    },
+    {
+      "question": "How do virtual threads differ from traditional threads in Java?",
+      "answers": [
+        "Virtual threads are managed by the JVM.",
+        "Virtual threads have lower overhead than traditional threads.",
+        "Virtual threads cannot be used for I/O operations.",
+        "Virtual threads are managed by the operating system."
+      ],
+      "correct": [0, 1]
+    }
+  ]
+}
