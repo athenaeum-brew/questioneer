@@ -1,0 +1,106 @@
+{
+  "id": "06",
+  "description": "Java Classes",
+  "questions": [
+    {
+      "question": "What is a class in Java?",
+      "answers": [
+        "A method that returns a value",
+        "A blueprint for creating objects",
+        "A way to store multiple values",
+        "A type of loop in Java"
+      ],
+      "correct": [1]
+    },
+    {
+      "question": "Which keyword is used to create an object in Java?",
+      "answers": [
+        "new",
+        "class",
+        "object",
+        "create"
+      ],
+      "correct": [0]
+    },
+    {
+      "question": "Which of the following is a characteristic of an object?",
+      "answers": [
+        "It has variables only",
+        "It can exist without a class",
+        "It has state and behavior",
+        "It can inherit from multiple classes in Java"
+      ],
+      "correct": [2]
+    },
+    {
+      "question": "What is the purpose of a constructor in Java?",
+      "answers": [
+        "To define the behavior of an object",
+        "To initialize objects when they are created",
+        "To create a new class",
+        "To define multiple methods"
+      ],
+      "correct": [1]
+    },
+    {
+      "question": "Which access modifier allows access to a class from any other class?",
+      "answers": [
+        "private",
+        "protected",
+        "default",
+        "public"
+      ],
+      "correct": [3]
+    },
+    {
+      "question": "What is the difference between an instance variable and a static variable?",
+      "answers": [
+        "An instance variable is shared among all objects; a static variable is unique to each object",
+        "An instance variable is unique to each object; a static variable is shared among all objects",
+        "Both are unique to each object",
+        "Both are shared among all objects"
+      ],
+      "correct": [1]
+    },
+    {
+      "question": "Which of the following keywords is used to inherit from a class in Java?",
+      "answers": [
+        "import",
+        "implements",
+        "extends",
+        "inherits"
+      ],
+      "correct": [2]
+    },
+    {
+      "question": "Which method is used to define the behavior of an object?",
+      "answers": [
+        "variable",
+        "method",
+        "constructor",
+        "class"
+      ],
+      "correct": [1]
+    },
+    {
+      "question": "What does the 'private' access modifier do?",
+      "answers": [
+        "Allows access to the method from anywhere",
+        "Prevents access to the method from other classes",
+        "Allows access only to classes in the same package",
+        "Allows access only to subclasses"
+      ],
+      "correct": [1]
+    },
+    {
+      "question": "Which statement is true about default constructors?",
+      "answers": [
+        "They are automatically created if no constructor is defined",
+        "They accept parameters",
+        "They must be defined explicitly",
+        "They cannot be used with parameterized constructors"
+      ],
+      "correct": [0]
+    }
+  ]
+}

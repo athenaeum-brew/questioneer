@@ -1,0 +1,157 @@
+{
+    "id": "07",
+    "description": "Java Object-Oriented Programming",
+    "questions": [
+      {
+        "question": "What is Object-Oriented Programming (OOP)?",
+        "answers": [
+          "A procedural programming paradigm",
+          "A programming paradigm organized around objects that encapsulate data and behavior",
+          "A functional programming paradigm",
+          "A type of low-level programming"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "Which of the following is NOT a principle of OOP?",
+        "answers": [
+          "Encapsulation",
+          "Abstraction",
+          "Inheritance",
+          "Compilation"
+        ],
+        "correct": [3]
+      },
+      {
+        "question": "Which principle of OOP refers to bundling data and methods within a single unit or class?",
+        "answers": [
+          "Polymorphism",
+          "Inheritance",
+          "Encapsulation",
+          "Abstraction"
+        ],
+        "correct": [2]
+      },
+      {
+        "question": "What is a potential cost associated with using OOP?",
+        "answers": [
+          "Simpler design process",
+          "Improved performance",
+          "Increased complexity",
+          "Easier learning curve"
+        ],
+        "correct": [2]
+      },
+      {
+        "question": "What does the `abstract` keyword signify when used in a class declaration?",
+        "answers": [
+          "The class can be instantiated",
+          "The class cannot be extended",
+          "The class cannot be instantiated and may contain abstract methods",
+          "The class can only contain concrete methods"
+        ],
+        "correct": [2]
+      },
+      {
+        "question": "In OOP, what is inheritance?",
+        "answers": [
+          "A way to duplicate code",
+          "A mechanism where a subclass inherits attributes and methods from a superclass",
+          "A principle to hide data",
+          "A type of data encapsulation"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "Which Java keyword is used to create a subclass?",
+        "answers": [
+          "extends",
+          "implements",
+          "inherits",
+          "subclass"
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "What is polymorphism in OOP?",
+        "answers": [
+          "The ability of different classes to be treated as instances of the same class through a common interface",
+          "The hiding of implementation details",
+          "The sharing of methods among different classes",
+          "The creation of new classes from existing ones"
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "Which statement about interfaces in Java is true?",
+        "answers": [
+          "Interfaces can have concrete methods",
+          "A class can implement multiple interfaces",
+          "Interfaces can be instantiated",
+          "Interfaces are used to create subclasses"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "What is the purpose of the `@Override` annotation in Java?",
+        "answers": [
+          "To indicate that a method is abstract",
+          "To catch errors at compile time if a method doesn't actually override a superclass method",
+          "To declare a new method",
+          "To hide a method"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "What is the main benefit of using composition over inheritance in OOP?",
+        "answers": [
+          "It creates deeper class hierarchies",
+          "It promotes code reuse and flexibility by combining simpler objects",
+          "It is easier to understand",
+          "It eliminates the need for interfaces"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "Which of the following is true about multiple inheritance in Java?",
+        "answers": [
+          "Java supports multiple inheritance with classes",
+          "Java supports multiple inheritance only with interfaces",
+          "Java does not support multiple inheritance at all",
+          "Multiple inheritance can be achieved through abstract classes"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "What is an enum in Java?",
+        "answers": [
+          "A class that allows multiple inheritance",
+          "A special data type that enables for a variable to be a set of predefined constants",
+          "A type of interface",
+          "A method for creating instances"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "What is UML commonly used for in OOP?",
+        "answers": [
+          "Writing code",
+          "Designing and visualizing the structure and behavior of software systems",
+          "Debugging programs",
+          "Running applications"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "Which of the following is NOT a tool used in OOP?",
+        "answers": [
+          "Classes",
+          "Abstract Classes",
+          "Constructors",
+          "Garbage Collectors"
+        ],
+        "correct": [3]
+      }
+    ]
+  }
+  
