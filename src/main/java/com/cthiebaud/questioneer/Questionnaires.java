@@ -35,6 +35,7 @@ public enum Questionnaires {
 
         List<QuestionnaireRecord> mutableList;
         try {
+            System.out.println(directory);
             mutableList = Files.list(Paths.get(directory.toURI()))
                     .map(path -> {
                         String fileName = path.getFileName().toString();
@@ -47,7 +48,9 @@ public enum Questionnaires {
                         if (!checkURL(check)) {
                             slides = null;
                         }
-                        return new QuestionnaireRecord(id, title, slides);
+                        QuestionnaireRecord qwe = new QuestionnaireRecord(id, title, slides);
+                        System.out.println(qwe);
+                        return qwe;
                     })
                     .peek(System.out::println)
                     .collect(Collectors.toList());

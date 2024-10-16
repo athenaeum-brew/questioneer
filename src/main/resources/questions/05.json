@@ -1,0 +1,106 @@
+{
+    "id": "05",
+    "description": "SnakeYAML and Maven",
+    "questions": [
+        {
+            "question": "What is SnakeYAML used for in Java?",
+            "answers": [
+                "To parse JSON files",
+                "To handle YAML files",
+                "To manage Maven dependencies",
+                "To optimize Java performance"
+            ],
+            "correct": [1]
+        },
+        {
+            "question": "Which method is used to read YAML data in SnakeYAML?",
+            "answers": [
+                "load",
+                "read",
+                "parse",
+                "deserialize"
+            ],
+            "correct": [0]
+        },
+        {
+            "question": "What file format does SnakeYAML typically work with?",
+            "answers": [
+                "JSON",
+                "XML",
+                "YAML",
+                "CSV"
+            ],
+            "correct": [2]
+        },
+        {
+            "question": "How do you specify a dependency for SnakeYAML in a Maven project?",
+            "answers": [
+                "By adding a classpath to the jar file",
+                "By downloading the jar file manually",
+                "By including it in the Maven dependencies in the `pom.xml`",
+                "By using `import` in the Java class"
+            ],
+            "correct": [2]
+        },
+        {
+            "question": "Which command is used to compile and package a Maven project?",
+            "answers": [
+                "mvn clean build",
+                "mvn install",
+                "mvn clean package",
+                "mvn build"
+            ],
+            "correct": [2]
+        },
+        {
+            "question": "What file is required to define the dependencies for a Maven project?",
+            "answers": [
+                "pom.xml",
+                "build.gradle",
+                "dependencies.txt",
+                "config.yaml"
+            ],
+            "correct": [0]
+        },
+        {
+            "question": "Which version of SnakeYAML resolved the critical CVE-2022-1471 vulnerability?",
+            "answers": [
+                "1.29",
+                "1.30",
+                "2.0",
+                "2.2"
+            ],
+            "correct": [2]
+        },
+        {
+            "question": "What command would you use to run a Java program with SnakeYAML using Maven?",
+            "answers": [
+                "java -jar snakeyaml.jar",
+                "mvn exec:java -Dexec.mainClass",
+                "java -cp snakeyaml",
+                "mvn compile run"
+            ],
+            "correct": [1]
+        },
+        {
+            "question": "What does the `loadAs` method in SnakeYAML do?",
+            "answers": [
+                "It loads a YAML file into a Java Map",
+                "It loads YAML data into a specific Java object (bean)",
+                "It serializes a Java object to a YAML file",
+                "It prints YAML content to the console"
+            ],
+            "correct": [1]
+        },
+        {
+            "question": "Which of the following is NOT a required component of a Maven project?",
+            "answers": [
+                "A `pom.xml` file",
+                "A `src` directory",
+                "A `target` directory",
+                "A `META-INF` folder"
+            ],
+            "correct": [3]
+        }
+    ]
+}
