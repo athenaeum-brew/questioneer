@@ -73,7 +73,7 @@
       "correct": [2]
     },
     {
-      "question": "Which method is used to define the behavior of an object?",
+      "question": "Which of these is used to specify the behavior of an object?",
       "answers": [
         "variable",
         "method",
