@@ -1,0 +1,136 @@
+{
+    "id": "03",
+    "description": "Java Collections API",
+    "questions": [
+        {
+            "question": "What is the primary purpose of the Java Collections Framework?",
+            "answers": [
+                "To provide a set of interfaces and classes for storing and manipulating collections of objects.",
+                "To enhance the performance of Java applications.",
+                "To manage memory allocation in Java.",
+                "To support multi-threading in Java."
+            ],
+            "correct": [0]
+        },
+        {
+            "question": "Which of the following is NOT a core interface in the Java Collections Framework?",
+            "answers": [
+                "List",
+                "Map",
+                "Set",
+                "Array"
+            ],
+            "correct": [3]
+        },
+        {
+            "question": "What distinguishes a Set from a List?",
+            "answers": [
+                "Sets allow duplicate elements while Lists do not.",
+                "Sets do not maintain any order while Lists are ordered.",
+                "Sets can only store primitive types.",
+                "Lists use hash tables for storage."
+            ],
+            "correct": [1]
+        },
+        {
+            "question": "Which of the following classes implements the List interface?",
+            "answers": [
+                "HashSet",
+                "ArrayList",
+                "TreeSet",
+                "LinkedHashMap"
+            ],
+            "correct": [1]
+        },
+        {
+            "question": "How can you ensure type safety when using collections in Java?",
+            "answers": [
+                "By using arrays instead of collections.",
+                "By utilizing generics in collection classes.",
+                "By overriding the equals() method in all classes.",
+                "By implementing the Serializable interface."
+            ],
+            "correct": [1]
+        },
+        {
+            "question": "What does the `hashCode()` method in Java return?",
+            "answers": [
+                "The memory address of the object.",
+                "A unique integer based on the object’s content.",
+                "The length of the object's string representation.",
+                "A reference to the object."
+            ],
+            "correct": [1]
+        },
+        {
+            "question": "What is the effect of overriding the `equals()` method without overriding `hashCode()`?",
+            "answers": [
+                "It will cause a compilation error.",
+                "It will lead to unexpected behavior when using collections like HashSet.",
+                "It will improve performance.",
+                "It is unnecessary."
+            ],
+            "correct": [1]
+        },
+        {
+            "question": "What happens when you try to add a duplicate element to a HashSet?",
+            "answers": [
+                "The new element replaces the old one.",
+                "An exception is thrown.",
+                "The duplicate is ignored.",
+                "The operation fails silently."
+            ],
+            "correct": [2]
+        },
+        {
+            "question": "Which method would you use to convert an array to a List?",
+            "answers": [
+                "Arrays.toList()",
+                "List.fromArray()",
+                "Arrays.asList()",
+                "List.of()"
+            ],
+            "correct": [2]
+        },
+        {
+            "question": "In which situation would you prefer using an Array over a Collection?",
+            "answers": [
+                "When you need dynamic resizing.",
+                "When memory and time efficiency are critical.",
+                "When you need to store objects only.",
+                "When you want built-in methods for searching."
+            ],
+            "correct": [1]
+        },
+        {
+            "question": "Which method can be used to sort a List in Java?",
+            "answers": [
+                "Collections.sort()",
+                "List.sort()",
+                "Arrays.sort()",
+                "Collections.order()"
+            ],
+            "correct": [0, 1]
+        },
+        {
+            "question": "What type of collection is a TreeMap?",
+            "answers": [
+                "A collection that stores unique elements.",
+                "A mapping of keys to values sorted by keys.",
+                "An ordered list that allows duplicates.",
+                "A synchronized collection."
+            ],
+            "correct": [1]
+        },
+        {
+            "question": "Which statement about arrays and collections is true?",
+            "answers": [
+                "Arrays can grow or shrink dynamically.",
+                "Collections can store primitive types.",
+                "Arrays have a fixed size once initialized.",
+                "Collections provide methods for adding and removing elements."
+            ],
+            "correct": [2, 3]
+        }
+    ]
+}
