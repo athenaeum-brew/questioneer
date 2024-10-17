@@ -21,6 +21,7 @@ public class QuestionnaireServlet extends HttpServlet {
             throws ServletException, IOException {
         // Get the requested path
         String requestURI = request.getRequestURI();
+        Object obj;
 
         // Extract the requested file name (e.g., m01.json, m02.json)
         String fileName = "/questions/" + requestURI.substring(requestURI.lastIndexOf("/") + 1) + ".json";
