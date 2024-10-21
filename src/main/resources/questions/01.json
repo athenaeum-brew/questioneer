@@ -13,8 +13,8 @@
       "correct": [0]
     },
     {
-      "question": "Which of the following is an example of a Java data type?",
-      "answers": ["int", "float", "string", "all of the above"],
+      "question": "Which of the following is an example of a primitive data type?",
+      "answers": ["int", "float", "string", "object"],
       "correct": [0, 1]
     },
     {
