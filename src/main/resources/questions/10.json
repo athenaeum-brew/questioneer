@@ -70,7 +70,7 @@
                 "mvn run-tests",
                 "mvn junit"
             ],
-            "correct": [0, 2]
+            "correct": [0]
         },
         {
             "question": "What does the @ParameterizedTest annotation do?",
