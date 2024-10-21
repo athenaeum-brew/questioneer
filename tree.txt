@@ -1,4 +1,5 @@
 .
+├── clean8080.ps1
 ├── pom.xml
 └── src
     └── main
@@ -7,6 +8,7 @@
         │       └── cthiebaud
         │           └── questioneer
         │               ├── AdminServlet.java
+        │               ├── GitHubDataListener.java
         │               ├── PartialAnswerServlet.java
         │               ├── QuestioneerContextListener.java
         │               ├── QuestioneerSessionListener.java
@@ -18,26 +20,48 @@
         │               ├── Questionnaires.java
         │               └── SubmitAnswersServlet.java
         ├── resources
-        │   └── questions
-        │       ├── 01.json
-        │       ├── 03.json
+        │   ├── questions
+        │   │   ├── 00.json
+        │   │   ├── 01.json
+        │   │   ├── 02.json
+        │   │   ├── 03.json
+        │   │   ├── 04.json
+        │   │   ├── 05.json
+        │   │   ├── 06.json
+        │   │   ├── 07.json
+        │   │   ├── 08.json
+        │   │   ├── 09.json
+        │   │   ├── foot.json
+        │   │   └── test.json
+        │   └── questions.0
+        │       ├── 04.json
         │       ├── 06.json
         │       ├── 07.json
         │       ├── 09.json
+        │       ├── 11.json
+        │       ├── 13.json
         │       ├── 15.json
         │       ├── 16.json
         │       ├── 17.json
+        │       ├── 18.json
+        │       ├── 22.json
         │       ├── 23.json
-        │       ├── 24.json
-        │       ├── foot.json
-        │       └── test.json
+        │       ├── 25.json
+        │       ├── 26.json
+        │       ├── digest.doc
+        │       └── digest.json
         └── webapp
+            ├── WEB-INF
+            │   └── config
+            │       └── config.properties
             ├── admin.jsp
             ├── admin².jsp
+            ├── examples.jsp
             ├── favicon.ico
             ├── header.jspf
             ├── hello.txt
             ├── index.jsp
+            ├── minimal.html
             └── questionnaire.jsp
 
-10 directories, 31 files
+13 directories, 52 files
