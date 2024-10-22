@@ -1,0 +1,126 @@
+{
+    "id": "10",
+    "description": "Unit Testing",
+    "questions": [
+        {
+            "question": "What is the primary purpose of unit testing?",
+            "answers": [
+                "To test individual units of code in isolation",
+                "To test the application as a whole",
+                "To ensure each part of the code functions as expected",
+                "To verify user interfaces"
+            ],
+            "correct": [0, 2]
+        },
+        {
+            "question": "Which of the following are benefits of unit testing?",
+            "answers": [
+                "Improves code quality",
+                "Reduces the number of lines of code",
+                "Simplifies debugging",
+                "Encourages better design"
+            ],
+            "correct": [0, 2, 3]
+        },
+        {
+            "question": "Which of the following are popular unit testing frameworks for Java?",
+            "answers": [
+                "JUnit 5",
+                "TestNG",
+                "Mockito",
+                "Cucumber"
+            ],
+            "correct": [0, 1, 2]
+        },
+        {
+            "question": "Which annotation is used to indicate a test method in JUnit 5?",
+            "answers": [
+                "@Test",
+                "@UnitTest",
+                "@BeforeTest",
+                "@Execute"
+            ],
+            "correct": [0]
+        },
+        {
+            "question": "What does the @BeforeEach annotation do?",
+            "answers": [
+                "Runs a method before all tests in the class",
+                "Runs a method before each test in the class",
+                "Runs a method after each test in the class",
+                "Runs a method after all tests in the class"
+            ],
+            "correct": [1]
+        },
+        {
+            "question": "What are some common assertions in JUnit 5?",
+            "answers": [
+                "assertEquals()",
+                "assertNotNull()",
+                "assertThrows()",
+                "assertTrue()"
+            ],
+            "correct": [0, 1, 2, 3]
+        },
+        {
+            "question": "How can you run JUnit tests with Maven?",
+            "answers": [
+                "mvn test",
+                "mvn execute",
+                "mvn run-tests",
+                "mvn junit"
+            ],
+            "correct": [0]
+        },
+        {
+            "question": "What does the @ParameterizedTest annotation do?",
+            "answers": [
+                "Indicates a test that can run with multiple input values",
+                "Allows running a test with different scenarios",
+                "Indicates a test that should be ignored",
+                "Indicates a test that runs after all other tests"
+            ],
+            "correct": [0, 1]
+        },
+        {
+            "question": "Which of the following are features of JUnit 5?",
+            "answers": [
+                "Modular architecture",
+                "Support for dynamic tests",
+                "Automatic test case generation",
+                "Support for lambda expressions"
+            ],
+            "correct": [0, 1, 3]
+        },
+        {
+            "question": "Which assertion checks if two values are equal?",
+            "answers": [
+                "assertSame()",
+                "assertEquals()",
+                "assertTrue()",
+                "assertNotNull()"
+            ],
+            "correct": [1]
+        },
+        {
+            "question": "What is the purpose of the JUnit Vintage component?",
+            "answers": [
+                "To provide backward compatibility for JUnit 3 and 4 tests",
+                "To introduce new annotations for testing",
+                "To run tests in parallel",
+                "To manage test dependencies"
+            ],
+            "correct": [0]
+        },
+        {
+            "question": "Which of the following annotations run once before all tests in the class?",
+            "answers": [
+                "@BeforeAll",
+                "@BeforeEach",
+                "@AfterAll",
+                "@AfterEach"
+            ],
+            "correct": [0]
+        }
+    ]
+}
