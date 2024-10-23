@@ -8,6 +8,35 @@
             <title>Quizz</title>
 
             <style>
+                progress[value] {
+                    /* Reset the default appearance */
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+  
+                    /* Get rid of default border in Firefox. */
+                    border: none;
+
+                    width: 100%;
+                    height: 20px;
+                }
+
+                progress[value]::-webkit-progress-bar {
+                    background-color: #dc3545;
+                    border-radius: 2px;
+                }
+
+                progress[value]::-webkit-progress-value {
+                    transition: width 0.5s ease-in-out;
+                    background: #28a745;
+                    border-radius: 2px;
+                }
+
+                progress[value]::-moz-progress-bar {
+                    background-color: #c7c7c7;
+                    border-radius: 2px;
+                }
+
                 .progress {
                     height: 20px;
                 }
@@ -338,6 +367,22 @@
                 summaryContainer.style.display = 'block'
                 const summary = document.getElementById('summary');
                 summary.innerHTML = '<h2>Questionnaire Summary</h2>';
+
+                // display an overall score
+                const userScore = (studentAnswers.filter(answer => answer.isCorrect).length)/(studentAnswers.length);
+
+                const score = document.createElement('div');
+                score.classList.add('quiz-score');
+                score.classList.add('card');
+                score.classList.add('mb-4');
+                score.innerHTML = "<div class=\"card-body\"><strong>Your score: " 
+                                    + (userScore * 100) 
+                                    + "%</strong><br/>" 
+                                    + "<progress id=\"score\" value=\""
+                                    + userScore 
+                                    + "\"></progress></div>";
+                
+                summary.appendChild(score);
 
                 questionnaire.questions.forEach((question, index) => {
                     const questionSummary = document.createElement('div');
