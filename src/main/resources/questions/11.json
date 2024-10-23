@@ -1,0 +1,107 @@
+{
+    "id": "11",
+    "description": "Java Records",
+    "questions": [
+      {
+        "question": "Which Java version introduced records?",
+        "answers": [
+          "Java 10",
+          "Java 14",
+          "Java 16",
+          "Java 11"
+        ],
+        "correct": [1, 2]
+      },
+      {
+        "question": "What are key features of a Java record?",
+        "answers": [
+          "Records are immutable.",
+          "Records provide built-in implementations of equals(), hashCode(), and toString().",
+          "Records can extend other classes.",
+          "Records automatically generate constructors."
+        ],
+        "correct": [0, 1, 3]
+      },
+      {
+        "question": "What is the primary purpose of Java records?",
+        "answers": [
+          "To create immutable data carriers.",
+          "To implement complex business logic.",
+          "To define objects that require minimal boilerplate code.",
+          "To make mutable classes."
+        ],
+        "correct": [0, 2]
+      },
+      {
+        "question": "Which statements are true about records implementing interfaces?",
+        "answers": [
+          "Records can implement interfaces.",
+          "Records cannot implement interfaces.",
+          "Records are required to implement the Serializable interface.",
+          "Records can implement multiple interfaces."
+        ],
+        "correct": [0, 3]
+      },
+      {
+        "question": "Which methods are automatically provided by Java records?",
+        "answers": [
+          "equals()",
+          "hashCode()",
+          "clone()",
+          "toString()"
+        ],
+        "correct": [0, 1, 3]
+      },
+      {
+        "question": "What restrictions apply to Java records?",
+        "answers": [
+          "Records cannot define additional instance fields.",
+          "Records cannot extend other classes.",
+          "Records must override toString().",
+          "Records must have at least one field."
+        ],
+        "correct": [0, 1]
+      },
+      {
+        "question": "Which of the following is a valid record declaration in Java?",
+        "answers": [
+          "record Employee(String name, int employeeNumber) {}",
+          "class Employee(String name, int employeeNumber) {}",
+          "struct Employee(String name, int employeeNumber) {}",
+          "Record Employee(String name, int employeeNumber) {}"
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "What are benefits of using records in Java?",
+        "answers": [
+          "Reduction in boilerplate code.",
+          "Automatic immutability of fields.",
+          "Allows direct inheritance from other classes.",
+          "Records are mutable by default."
+        ],
+        "correct": [0, 1]
+      },
+      {
+        "question": "Can you define a local record inside a method?",
+        "answers": [
+          "Yes, records can be defined inside methods.",
+          "No, records must be top-level classes.",
+          "Only in interfaces.",
+          "Only if the record implements an interface."
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "How do you create an instance of a record called Point with x=10 and y=20?",
+        "answers": [
+          "new Point(10, 20);",
+          "Point p = Point(10, 20);",
+          "Point p = new Point(10, 20);",
+          "Point.create(10, 20);"
+        ],
+        "correct": [2]
+      }
+    ]
+  }
+  
