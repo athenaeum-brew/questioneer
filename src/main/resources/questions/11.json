@@ -3,16 +3,6 @@
     "description": "Java Records",
     "questions": [
       {
-        "question": "Which Java version introduced records?",
-        "answers": [
-          "Java 10",
-          "Java 14",
-          "Java 16",
-          "Java 11"
-        ],
-        "correct": [1, 2]
-      },
-      {
         "question": "What are key features of a Java record?",
         "answers": [
           "Records are immutable.",
