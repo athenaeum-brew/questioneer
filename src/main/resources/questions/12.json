@@ -1,0 +1,378 @@
+{
+  "id": "1",
+  "description": "Maven: The Java Build Tool",
+  "questions": [
+    {
+      "question": "What is Maven?",
+      "answers": [
+        "A Java build automation tool",
+        "A Java runtime environment",
+        "A programming language",
+        "An Integrated Development Environment (IDE)"
+      ],
+      "correct": [
+        0
+      ]
+    },
+    {
+      "question": "What are the key concepts of Maven?",
+      "answers": [
+        "Build lifecycle and plugins",
+        "JVM and bytecode",
+        "Version control and repositories",
+        "Syntax and grammar"
+      ],
+      "correct": [
+        0
+      ]
+    },
+    {
+      "question": "What is a lifecycle in Maven?",
+      "answers": [
+        "A sequence of phases",
+        "A collection of repositories",
+        "A plugin configuration",
+        "A dependency resolution mechanism"
+      ],
+      "correct": [
+        0
+      ]
+    },
+    {
+      "question": "What phase of the default lifecycle compiles the source code?",
+      "answers": [
+        "Validate",
+        "Compile",
+        "Test",
+        "Package"
+      ],
+      "correct": [
+        1
+      ]
+    },
+    {
+      "question": "What is a Maven plugin?",
+      "answers": [
+        "A task runner in Maven",
+        "A repository in Maven",
+        "A dependency in Maven",
+        "A lifecycle in Maven"
+      ],
+      "correct": [
+        0
+      ]
+    },
+    {
+      "question": "What is a Mojo?",
+      "answers": [
+        "A Maven goal",
+        "A Maven repository",
+        "A Maven dependency",
+        "A Maven lifecycle phase"
+      ],
+      "correct": [
+        0
+      ]
+    },
+    {
+      "question": "What is the default plugin for cleaning a project?",
+      "answers": [
+        "maven-clean-plugin",
+        "maven-compiler-plugin",
+        "maven-surefire-plugin",
+        "maven-jar-plugin"
+      ],
+      "correct": [
+        0
+      ]
+    },
+    {
+      "question": "Which phase does maven-surefire-plugin bind to by default?",
+      "answers": [
+        "Compile",
+        "Test",
+        "Package",
+        "Install"
+      ],
+      "correct": [
+        1
+      ]
+    },
+    {
+      "question": "Where can you find Maven's default Super POM?",
+      "answers": [
+        "In Maven's source code",
+        "In the target folder",
+        "In the .m2/repository directory",
+        "In the pom.xml file"
+      ],
+      "correct": [
+        0
+      ]
+    },
+    {
+      "question": "What does the Super POM do?",
+      "answers": [
+        "Defines default configurations for all Maven projects",
+        "Provides dependency management",
+        "Compiles source code",
+        "Runs unit tests"
+      ],
+      "correct": [
+        0
+      ]
+    },
+    {
+      "question": "What does Maven use to resolve dependencies?",
+      "answers": [
+        "Transitive resolution",
+        "Manual configuration",
+        "Plugin goals",
+        "Lifecycle phases"
+      ],
+      "correct": [
+        0
+      ]
+    },
+    {
+      "question": "Which scope is used for dependencies required only for testing?",
+      "answers": [
+        "Compile",
+        "Test",
+        "Runtime",
+        "Provided"
+      ],
+      "correct": [
+        1
+      ]
+    },
+    {
+      "question": "What does the MAJOR version indicate in semantic versioning?",
+      "answers": [
+        "Backward-incompatible changes",
+        "New features",
+        "Bug fixes",
+        "Test enhancements"
+      ],
+      "correct": [
+        0
+      ]
+    },
+    {
+      "question": "What is the correct format of semantic versioning?",
+      "answers": [
+        "MAJOR.MINOR.PATCH",
+        "VERSION.NUMBER.UPDATE",
+        "BUILD.VERSION.FIX",
+        "X.Y.Z"
+      ],
+      "correct": [
+        0
+      ]
+    },
+    {
+      "question": "What does a SNAPSHOT version represent?",
+      "answers": [
+        "A work-in-progress version",
+        "A stable release",
+        "A deprecated feature",
+        "A rollback point"
+      ],
+      "correct": [
+        0
+      ]
+    },
+    {
+      "question": "Why should SNAPSHOTs be avoided in production?",
+      "answers": [
+        "They are unstable and may cause inconsistencies",
+        "They are hard to configure",
+        "They take longer to build",
+        "They require plugins"
+      ],
+      "correct": [
+        0
+      ]
+    },
+    {
+      "question": "Where is the local repository located by default?",
+      "answers": [
+        "~/.m2/repository",
+        "src/main/resources",
+        "target/",
+        "/usr/local/maven/repository"
+      ],
+      "correct": [
+        0
+      ]
+    },
+    {
+      "question": "What is the central repository?",
+      "answers": [
+        "A global repository hosted by Maven maintainers",
+        "A private repository for custom artifacts",
+        "A local repository on your machine",
+        "A repository in your target folder"
+      ],
+      "correct": [
+        0
+      ]
+    },
+    {
+      "question": "What is the purpose of the Maven Wrapper?",
+      "answers": [
+        "To ensure consistent Maven versions across environments",
+        "To compile the source code",
+        "To run tests",
+        "To resolve dependencies"
+      ],
+      "correct": [
+        0
+      ]
+    },
+    {
+      "question": "What command is used to generate the Maven Wrapper?",
+      "answers": [
+        "mvn -N wrapper:wrapper",
+        "mvn clean install",
+        "mvn compile",
+        "mvn help:effective-pom"
+      ],
+      "correct": [
+        0
+      ]
+    },
+    {
+      "question": "What phase packages the compiled code into a JAR?",
+      "answers": [
+        "Package",
+        "Compile",
+        "Install",
+        "Test"
+      ],
+      "correct": [
+        0
+      ]
+    },
+    {
+      "question": "What is a dependency scope in Maven?",
+      "answers": [
+        "Defines when a dependency is available",
+        "A plugin goal",
+        "A lifecycle phase",
+        "A repository type"
+      ],
+      "correct": [
+        0
+      ]
+    },
+    {
+      "question": "What is Semantic Versioning designed for?",
+      "answers": [
+        "Versioning with clear compatibility rules",
+        "Random versioning numbers",
+        "Repository management",
+        "Dependency scope management"
+      ],
+      "correct": [
+        0
+      ]
+    },
+    {
+      "question": "Which Maven plugin is used to compile Java code?",
+      "answers": [
+        "maven-compiler-plugin",
+        "maven-clean-plugin",
+        "maven-jar-plugin",
+        "maven-surefire-plugin"
+      ],
+      "correct": [
+        0
+      ]
+    },
+    {
+      "question": "Which repository does Maven check first for dependencies?",
+      "answers": [
+        "Local repository",
+        "Central repository",
+        "Remote repository",
+        "Super POM"
+      ],
+      "correct": [
+        0
+      ]
+    },
+    {
+      "question": "What is the purpose of the Verify phase in Maven?",
+      "answers": [
+        "To ensure the package meets quality standards",
+        "To deploy the package",
+        "To compile the source code",
+        "To install the package locally"
+      ],
+      "correct": [
+        0
+      ]
+    },
+    {
+      "question": "What does the Maven Wrapper generate?",
+      "answers": [
+        "Scripts to use Maven without installing it globally",
+        "Test reports",
+        "Dependency graphs",
+        "Lifecycle logs"
+      ],
+      "correct": [
+        0
+      ]
+    },
+    {
+      "question": "Which Maven plugin is used for running unit tests?",
+      "answers": [
+        "maven-surefire-plugin",
+        "maven-compiler-plugin",
+        "maven-clean-plugin",
+        "maven-jar-plugin"
+      ],
+      "correct": [
+        0
+      ]
+    },
+    {
+      "question": "What is a Remote Repository in Maven?",
+      "answers": [
+        "A custom or private repository hosted externally",
+        "A repository on your local machine",
+        "A repository hosted by Maven maintainers",
+        "A folder in your target directory"
+      ],
+      "correct": [
+        0
+      ]
+    },
+    {
+      "question": "What is the default Maven command to install a package locally?",
+      "answers": [
+        "mvn install",
+        "mvn compile",
+        "mvn deploy",
+        "mvn package"
+      ],
+      "correct": [
+        0
+      ]
+    },
+    {
+      "question": "What is the purpose of the clean lifecycle in Maven?",
+      "answers": [
+        "To remove generated files from previous builds",
+        "To install dependencies",
+        "To deploy the package",
+        "To verify the build"
+      ],
+      "correct": [
+        0
+      ]
+    }
+  ]
+}
