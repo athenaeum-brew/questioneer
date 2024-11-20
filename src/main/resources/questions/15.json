@@ -1,0 +1,187 @@
+{
+    "id": "01",
+    "description": "Javadoc Basics",
+    "questions": [
+        {
+            "question": "What is the purpose of Javadoc?",
+            "answers": [
+                "To execute Java programs",
+                "To generate HTML documentation from source code comments",
+                "To compile Java files into bytecode",
+                "To manage Java dependencies"
+            ],
+            "correct": [
+                1
+            ]
+        },
+        {
+            "question": "Which of the following is a valid Javadoc comment?",
+            "answers": [
+                "// This is a comment",
+                "/* This is a comment */",
+                "/** This is a Javadoc comment */",
+                "# This is a comment"
+            ],
+            "correct": [
+                2
+            ]
+        },
+        {
+            "question": "Which tag is used to describe method parameters in Javadoc?",
+            "answers": [
+                "@param",
+                "@return",
+                "@throws",
+                "@author"
+            ],
+            "correct": [
+                0
+            ]
+        },
+        {
+            "question": "How do you generate Javadoc HTML documentation?",
+            "answers": [
+                "By running `javac` on the source files",
+                "By running `javadoc` on the source files",
+                "By running `java` on the compiled files",
+                "By adding comments to your code"
+            ],
+            "correct": [
+                1
+            ]
+        },
+        {
+            "question": "Which of the following tags is used to document an exception a method might throw?",
+            "answers": [
+                "@param",
+                "@throws",
+                "@return",
+                "@exception"
+            ],
+            "correct": [
+                1,
+                3
+            ]
+        },
+        {
+            "question": "Which inline tag is used to format text as code in Javadoc?",
+            "answers": [
+                "{@code}",
+                "{@link}",
+                "{@snippet}",
+                "{@docRoot}"
+            ],
+            "correct": [
+                0
+            ]
+        },
+        {
+            "question": "What is the primary advantage of using Javadoc comments?",
+            "answers": [
+                "They improve runtime performance of the application.",
+                "They provide a standard way to document code, generating consistent HTML documentation.",
+                "They help with syntax error detection in the code.",
+                "They automatically refactor the codebase."
+            ],
+            "correct": [
+                1
+            ]
+        },
+        {
+            "question": "What is the correct Javadoc tag to specify the author of a class or method?",
+            "answers": [
+                "@author",
+                "@version",
+                "@return",
+                "@param"
+            ],
+            "correct": [
+                0
+            ]
+        },
+        {
+            "question": "Which option allows you to customize the output directory for generated Javadoc?",
+            "answers": [
+                "-output",
+                "-docdir",
+                "-d",
+                "-directory"
+            ],
+            "correct": [
+                2
+            ]
+        },
+        {
+            "question": "What is the purpose of the `@return` tag in Javadoc?",
+            "answers": [
+                "To describe the parameters of a method",
+                "To specify the return type of a method",
+                "To describe what a method returns",
+                "To indicate an exception a method might throw"
+            ],
+            "correct": [
+                2
+            ]
+        },
+        {
+            "question": "Which command adds version information to the generated Javadoc?",
+            "answers": [
+                "`javadoc -v`",
+                "`javadoc -version`",
+                "`javadoc -add-version`",
+                "`javadoc -metadata`"
+            ],
+            "correct": [
+                1
+            ]
+        },
+        {
+            "question": "How can you link to another class or method in Javadoc?",
+            "answers": [
+                "Using the {@link} tag",
+                "Using the {@code} tag",
+                "Using the {@snippet} tag",
+                "Using the {@inheritDoc} tag"
+            ],
+            "correct": [
+                0
+            ]
+        },
+        {
+            "question": "Which Javadoc tag is used to describe exceptions a method might throw?",
+            "answers": [
+                "@param",
+                "@throws",
+                "@exception",
+                "Both @throws and @exception"
+            ],
+            "correct": [
+                3
+            ]
+        },
+        {
+            "question": "What is the correct syntax to include a code example in Javadoc for Java 18+?",
+            "answers": [
+                "{@snippet int result = a + b;}",
+                "{@code int result = a + b;}",
+                "{@example int result = a + b;}",
+                "{@snippet : int result = a + b;}"
+            ],
+            "correct": [
+                3
+            ]
+        },
+        {
+            "question": "Which of the following is NOT a valid use case for Javadoc comments?",
+            "answers": [
+                "Generating API documentation",
+                "Documenting implementation details",
+                "Adding runtime functionality",
+                "Providing code examples"
+            ],
+            "correct": [
+                2
+            ]
+        }
+    ]
+}
