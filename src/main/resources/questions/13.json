@@ -1,0 +1,97 @@
+{
+    "id": "13",
+    "description": "Password Validator Assignment",
+    "questions": [
+      {
+        "question": "What is the purpose of the PasswordValidator interface?",
+        "answers": [
+          "To validate passwords based on specific criteria.",
+          "To store user passwords securely.",
+          "To generate random passwords.",
+          "To create a database of user credentials."
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "What does the ValidationResult record represent?",
+        "answers": [
+          "The criteria used to validate passwords.",
+          "The result of password validation, including status and an optional message.",
+          "A collection of potential passwords.",
+          "The password length requirement."
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "Which component is responsible for dynamically loading and testing password validators?",
+        "answers": [
+          "PasswordValidator interface",
+          "PasswordValidatorTester class",
+          "ValidationResult record",
+          "PasswordLengthValidator class"
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "Which of the following must be included in the team's deliverables?",
+        "answers": [
+          "A JAR file containing the implementation.",
+          "A pom.xml file with <scm> and <developers> sections.",
+          "A Word document describing validation criteria.",
+          "Unit tests for the implementation."
+        ],
+        "correct": [0, 1, 3]
+      },
+      {
+        "question": "What must the <developers> section in the pom.xml file contain?",
+        "answers": [
+          "A list of GitHub IDs of the students involved in the project.",
+          "The name of the password validation team.",
+          "The description of validation criteria.",
+          "The Java version used in the implementation."
+        ],
+        "correct": [0]
+      },
+      {
+        "question": "Where must the JAR file and pom.xml be pushed?",
+        "answers": [
+          "To a local repository.",
+          "To the athenaeum-brew Maven repository.",
+          "To the student's personal GitHub repository.",
+          "To Maven Central."
+        ],
+        "correct": [1]
+      },
+      {
+        "question": "Which section of the pom.xml file specifies where the project sources are hosted?",
+        "answers": [
+          "<developers>",
+          "<dependencies>",
+          "<scm>",
+          "<distributionManagement>"
+        ],
+        "correct": [2]
+      },
+      {
+        "question": "What format is NOT allowed for the README file describing validation criteria?",
+        "answers": [
+          "Plain text",
+          "Markdown",
+          "PDF",
+          "Microsoft Word"
+        ],
+        "correct": [3]
+      },
+      {
+        "question": "What does the <distributionManagement> section in the pom.xml specify?",
+        "answers": [
+          "The Maven repository to which artifacts will be published.",
+          "The developers who contributed to the project.",
+          "The validation criteria for passwords.",
+          "The source code management URL."
+        ],
+        "correct": [0]
+      }
+    ]
+  }
+  
