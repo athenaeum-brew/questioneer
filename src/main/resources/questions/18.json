@@ -1,6 +1,6 @@
 {
     "id": "18",
-    "description": "Overriding, Static, Enums, Reflection and Annotations",
+    "description": "Overriding, Static, Enums, Reflection, and Annotations",
     "questions": [
         {
             "question": "What is method overriding in Java?",
