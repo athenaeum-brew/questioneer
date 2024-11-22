@@ -1,0 +1,316 @@
+{
+    "id": "18",
+    "description": "Overriding, Enums, Static, Reflection and Annotations",
+    "questions": [
+        {
+            "question": "What is method overriding in Java?",
+            "answers": [
+                "Defining a method with the same name but different parameters in the same class",
+                "Providing a new implementation of a method in a subclass",
+                "Using the `static` keyword to modify a method in a subclass",
+                "Calling a method from a superclass without modification"
+            ],
+            "correct": [1]
+        },
+        {
+            "question": "Which annotation is used to ensure a method is overriding a superclass method?",
+            "answers": [
+                "@Override",
+                "@Overridden",
+                "@Inherited",
+                "@Superclass"
+            ],
+            "correct": [0]
+        },
+        {
+            "question": "What happens if a method in the subclass does not match the signature of the overridden method?",
+            "answers": [
+                "It will throw a compile-time error",
+                "The program will run with warnings",
+                "The superclass method will be called by default",
+                "It will create a new method unrelated to the superclass method"
+            ],
+            "correct": [3]
+        },
+        {
+            "question": "Which access modifier can a subclass method have when overriding a `protected` superclass method?",
+            "answers": [
+                "private",
+                "protected",
+                "public",
+                "default"
+            ],
+            "correct": [1, 2]
+        },
+        {
+            "question": "Can a static method be overridden in Java?",
+            "answers": [
+                "Yes, using the `@Override` annotation",
+                "Yes, but only if it has the same return type",
+                "No, static methods cannot be overridden",
+                "No, static methods must be final"
+            ],
+            "correct": [2]
+        },
+        {
+            "question": "What does the `static` keyword in Java signify?",
+            "answers": [
+                "A method or field belongs to an instance of the class",
+                "A method or field belongs to the class itself",
+                "A method or field is immutable",
+                "A method or field cannot be overridden"
+            ],
+            "correct": [1]
+        },
+        {
+            "question": "Which of the following are true about static fields?",
+            "answers": [
+                "They are shared among all instances of a class",
+                "Each instance of a class gets its own copy",
+                "They can be accessed without creating an instance",
+                "They can be overridden"
+            ],
+            "correct": [0, 2]
+        },
+        {
+            "question": "Which of these statements about static methods is correct?",
+            "answers": [
+                "Static methods cannot access instance variables",
+                "Static methods can be abstract",
+                "Static methods can use the `this` keyword",
+                "Static methods can be called using the class name"
+            ],
+            "correct": [0, 3]
+        },
+        {
+            "question": "Which of the following is a valid way to call a static method in Java?",
+            "answers": [
+                "By using an object instance",
+                "By using the class name",
+                "By using the keyword `static`",
+                "None of these"
+            ],
+            "correct": [0, 1]
+        },
+        {
+            "question": "Which of the following is true about static methods in Java?",
+            "answers": [
+                "Static methods can be called without creating an instance of the class",
+                "Static methods can override instance methods in a superclass",
+                "Static methods belong to the class rather than any specific instance",
+                "Static methods can access other static members of the same class"
+            ],
+            "correct": [0, 2, 3]
+        },
+        {
+            "question": "What is Java Reflection?",
+            "answers": [
+                "A way to dynamically inspect and modify the behavior of classes, methods, and fields at runtime",
+                "A feature to create immutable objects",
+                "A process of overriding methods during runtime",
+                "A mechanism to synchronize threads dynamically"
+            ],
+            "correct": [0]
+        },
+        {
+            "question": "Which package contains the core classes for reflection in Java?",
+            "answers": [
+                "java.util",
+                "java.lang.reflect",
+                "java.reflect",
+                "java.lang.reflection"
+            ],
+            "correct": [1]
+        },
+        {
+            "question": "Which method is used to obtain the class object for a given class in Java?",
+            "answers": [
+                "getClass()",
+                "Class.forName()",
+                "ClassLoader.getClass()",
+                "new Class()"
+            ],
+            "correct": [1]
+        },
+        {
+            "question": "What can you NOT do with Java Reflection?",
+            "answers": [
+                "Access private fields",
+                "Create objects dynamically",
+                "Modify a final field",
+                "Retrieve method parameter names"
+            ],
+            "correct": [3]
+        },
+        {
+            "question": "What is a major drawback of using reflection?",
+            "answers": [
+                "It increases runtime performance",
+                "It bypasses compile-time checks",
+                "It cannot access private fields",
+                "It requires explicit synchronization"
+            ],
+            "correct": [1]
+        },
+        {
+            "question": "What is the purpose of annotations in Java?",
+            "answers": [
+                "To provide metadata for Java code",
+                "To replace XML configuration files",
+                "To write comments that are accessible at runtime",
+                "To create custom exceptions"
+            ],
+            "correct": [0]
+        },
+        {
+            "question": "Which of these is a built-in Java annotation?",
+            "answers": [
+                "@Override",
+                "@Entity",
+                "@Inject",
+                "@Retention"
+            ],
+            "correct": [0]
+        },
+        {
+            "question": "What is the role of the `@Retention` annotation?",
+            "answers": [
+                "Specifies the lifecycle of the annotation",
+                "Defines whether the annotation is repeatable",
+                "Marks an annotation for overriding methods",
+                "Determines the order of annotations"
+            ],
+            "correct": [0]
+        },
+        {
+            "question": "Which retention policy ensures that an annotation is available at runtime?",
+            "answers": [
+                "CLASS",
+                "SOURCE",
+                "RUNTIME",
+                "STATIC"
+            ],
+            "correct": [2]
+        },
+        {
+            "question": "What is a marker annotation in Java?",
+            "answers": [
+                "An annotation with no methods",
+                "An annotation that requires a default value",
+                "An annotation that is only used for documentation",
+                "An annotation that must be inherited"
+            ],
+            "correct": [0]
+        },
+        {
+            "question": "Can you create custom annotations in Java?",
+            "answers": [
+                "No, Java only supports built-in annotations",
+                "Yes, using the `@interface` keyword",
+                "Yes, using the `class` keyword",
+                "No, custom annotations are not supported"
+            ],
+            "correct": [1]
+        },
+        {
+            "question": "What is an enum in Java?",
+            "answers": [
+                "A special class that represents a group of constants",
+                "A data type that can hold multiple values at once",
+                "A way to create mutable collections of objects",
+                "A replacement for arrays in Java"
+            ],
+            "correct": [0]
+        },
+        {
+            "question": "How do you declare an enum in Java?",
+            "answers": [
+                "Using the `class` keyword",
+                "Using the `enum` keyword",
+                "Using the `Enum` class from `java.util`",
+                "Using the `@Enum` annotation"
+            ],
+            "correct": [1]
+        },
+        {
+            "question": "Which method is NOT available for Java enums?",
+            "answers": [
+                "values()",
+                "ordinal()",
+                "name()",
+                "toStringValues()"
+            ],
+            "correct": [3]
+        },
+        {
+            "question": "Which of the following is true about Java enums?",
+            "answers": [
+                "Enums can have fields and methods",
+                "Enums can extend other classes",
+                "Enums can implement interfaces",
+                "Enums are always static and final"
+            ],
+            "correct": [0, 2, 3]
+        },
+        {
+            "question": "What does the `ordinal()` method of an enum return?",
+            "answers": [
+                "The position of the enum constant in the enum declaration",
+                "The name of the enum constant",
+                "The hash code of the enum constant",
+                "The value of the constant as a string"
+            ],
+            "correct": [0]
+        },
+        {
+            "question": "Which keyword is used to explicitly call a superclass method that is overridden in the subclass?",
+            "answers": [
+                "this",
+                "super",
+                "override",
+                "parent"
+            ],
+            "correct": [1]
+        },
+        {
+            "question": "Which method can be overridden to provide a custom string representation of an object?",
+            "answers": [
+                "toString()",
+                "hashCode()",
+                "equals()",
+                "compareTo()"
+            ],
+            "correct": [0]
+        },
+        {
+            "question": "What is the default return type of a static factory method used to return an instance of a class?",
+            "answers": [
+                "The type of the class being instantiated",
+                "void",
+                "The superclass type",
+                "Any type, based on the method's return type"
+            ],
+            "correct": [0]
+        },
+        {
+            "question": "Which method in the `Class` class can be used to retrieve an array of declared methods of a class, including private ones?",
+            "answers": [
+                "getMethods()",
+                "getDeclaredMethods()",
+                "getDeclaredFields()",
+                "getAccessibleMethods()"
+            ],
+            "correct": [1]
+        },
+        {
+            "question": "What happens when an annotation has a `RetentionPolicy.CLASS` retention?",
+            "answers": [
+                "The annotation is only visible in source code",
+                "The annotation is available in the compiled bytecode but not at runtime",
+                "The annotation is visible at runtime",
+                "The annotation is ignored entirely by the compiler"
+            ],
+            "correct": [1]
+        }
+    ]
+}
