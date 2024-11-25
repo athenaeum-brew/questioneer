@@ -3,6 +3,7 @@ package com.cthiebaud.questioneer;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URI;
@@ -14,10 +15,12 @@ import java.nio.file.Paths;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.yaml.snakeyaml.Yaml;
 
 public enum Questionnaires {
     INSTANCE;
@@ -31,6 +34,23 @@ public enum Questionnaires {
         File directory = new File(url.getPath());
         if (!directory.isDirectory()) {
             throw new IllegalArgumentException("Resource is not a directory: " + resourcePath);
+        }
+
+        Yaml yaml = new Yaml();
+        Map<String, Boolean> examSubjectMap;
+
+        try {
+            try (InputStream inputStream = Questionnaires.class.getClassLoader()
+                    .getResourceAsStream("examSubjects.yaml")) {
+                if (inputStream == null) {
+                    throw new IllegalArgumentException("YAML file not found in classpath: examSubjects.yaml");
+                }
+                Map<String, Object> yamlData = yaml.load(inputStream);
+                // Extract the map from the YAML structure
+                examSubjectMap = (Map<String, Boolean>) yamlData.get("examSubjects");
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
 
         List<QuestionnaireRecord> mutableList;
@@ -48,7 +68,10 @@ public enum Questionnaires {
                         if (!checkURL(check)) {
                             slides = null;
                         }
-                        QuestionnaireRecord qwe = new QuestionnaireRecord(id, title, slides);
+                        // Fetch examSubject from the map
+                        boolean examSubject = examSubjectMap.getOrDefault(id, true);
+
+                        QuestionnaireRecord qwe = new QuestionnaireRecord(id, title, slides, examSubject);
                         System.out.println(qwe);
                         return qwe;
                     })
