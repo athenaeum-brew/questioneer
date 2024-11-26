@@ -36,6 +36,7 @@
                         }
 
                         .outside-exam td {
+                            color: lightgray;
                             /* background-color: #f8d7da !important;
                             light red for non-exam subjects */
                         }
